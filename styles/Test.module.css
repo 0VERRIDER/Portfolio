@@ -1,0 +1,373 @@
+.container {
+ /* overflow: hidden; */
+ overflow-y: scroll;
+ height: 100vh;
+ scroll-snap-type: mandatory; 
+ scroll-snap-type: y mandatory;
+}
+.aboutme{
+  position: absolute;
+  margin: 32vh 0 0 55%;
+}
+.pageTitle{
+  font-size:24px;
+  color:#fff;
+  font-weight:bold;
+  /* margin:35vh 0 0 20vh; */
+}
+.pageTitleCenter{
+  font-size:24px;
+  color:#fff;
+  font-weight:bold;
+  text-align: center;
+  margin:10vh 0 0 auto;
+}
+.pageContents{
+  color:white;
+  margin: 2vh 0 0 0;
+  width:80%;
+}
+.child{
+   height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+  overflow: hidden;
+}
+.main{
+  
+  line-height: 58px;
+  font-size: 64px;
+  color: white;
+   
+  font-weight: 700;
+}
+.greetings{
+display: block;
+text-transform: uppercase;
+
+}
+.name{
+  display: inline-block;
+  text-transform: uppercase;
+  bottom: -45px;
+ 
+  }
+  .description ul{
+    overflow: hidden;
+    height: 24px;
+  }
+  .description > ul > li{
+    position: relative;
+    text-decoration: none;
+    font-weight: 600;
+    color:white;
+    display: block;
+    height: 25px;
+    white-space: nowrap;
+    margin-bottom: -25px;
+    background-color: #121212;
+    transform: translateY(25px) ;
+    transition: transform 1s;
+
+  }
+  .slideUp{
+    transition: transform 1s;
+    transform: translateY(0) !important;
+    z-index: 5;
+    
+  }
+  
+  .title{
+    position:absolute;
+    display: block;
+    margin:35vh 0 0 18%;
+  }
+  
+.frontAvatar > .rect{
+  position: absolute;
+  top:35vh;
+  left:62%;
+width:300px;
+height:200px;
+background-color: #7e767656;
+border-radius: 20px;
+}
+.frontAvatar > .rect::before{
+  content: '';
+  position: absolute;
+  margin: -10px 0 0 -10px;
+width:300px;
+height:200px;
+border-radius: 20px;
+background:#1d1e22;
+}
+.frontAvatar > .rect > .Title{
+  position: absolute;
+  color:#e1e1e1b9;
+  margin: 10px 0 0 10px;
+  font-size: 12px;
+}
+.fileStat{
+  position: absolute;
+  background-color: #e1e1e1b9;
+  width:8px;
+  height: 8px;
+  margin:15px 0 0 60px;
+  display: block;
+  border-radius: 50%;
+}
+.fileSaved{
+ opacity: 0;
+}
+.frontAvatar  pre{
+  position: relative;
+  font-size: 12px;
+  top: 25px;
+  overflow: hidden;
+  line-height: 21px;
+
+}
+.frontAvatar pre code{
+  white-space: pre-wrap;
+  text-align: justify;
+}
+.nextDownContainer{
+  position: fixed;
+  bottom: -20px;
+  left:50%;
+
+}
+.nextBtn{
+  width: 50px;
+}
+.skillDiag img {
+  display: block;
+  margin: 10vh auto auto auto;
+  width:40%;
+}
+.scrollDown{
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  top:85vh;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100px;
+}
+.hideField{
+  opacity: 0;
+}
+.showField{
+  opacity: 1;
+  animation: fadein 3s;
+}
+.mouse {
+  width: 25px;
+  height: 45px;
+  border: 1px solid #FFF;
+  border-radius: 60px;
+  position: relative;
+}
+.mouse::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 10px;
+  left: 52%;
+  transform: translateX(-50%);
+  background-color: #FFF;
+  border-radius: 50%;
+  opacity: 1;
+  animation: wheel 2s infinite;
+  -webkit-animation: wheel 2s infinite;
+}
+.menuIcon { 
+  position: absolute;
+  right:50px;
+  top:30px;
+  display: inline-block;
+  width: 24px;
+  color: #FFF;
+  height: 24px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'%0Awidth='24' height='24'%0AviewBox='0 0 24 24'%0Astyle=' fill:%23FFFFFF;'%3E%3Cpath d='M 3 5 A 1.0001 1.0001 0 1 0 3 7 L 21 7 A 1.0001 1.0001 0 1 0 21 5 L 3 5 z M 3 11 A 1.0001 1.0001 0 1 0 3 13 L 21 13 A 1.0001 1.0001 0 1 0 21 11 L 3 11 z M 3 17 A 1.0001 1.0001 0 1 0 3 19 L 21 19 A 1.0001 1.0001 0 1 0 21 17 L 3 17 z'%3E%3C/path%3E%3C/svg%3E") 50% 50% no-repeat;
+  background-size: 100%; 
+}
+@keyframes fadein {
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+@keyframes wheel {
+  to {
+    opacity: 0;
+    top: 30px;
+  }
+}
+@-webkit-keyframes wheel {
+  to {
+    opacity: 0;
+    top: 30px;
+  }
+}
+.scroll {
+  width: 60px;
+  height: 60px;
+  /* border: 2px solid #333; */
+  border-radius: 50%;
+  position: relative;
+  animation: down 1.5s infinite;
+  -webkit-animation: down 1.5s infinite;
+}
+.scroll::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 18px;
+  width: 12px;
+  height: 12px;
+  border-left: 2px solid rgba(255, 255, 255, 0.60);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.60);
+  transform: rotate(-45deg);
+}
+
+.avatar{
+  position: absolute;
+  width:200px;
+  margin: 32vh 0 0 20%;
+}
+@keyframes down {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translateY(15px);
+  }
+  40% {
+    transform: translate(0);
+  }
+}
+@-webkit-keyframes down {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translateY(15px);
+  }
+  40% {
+    transform: translate(0);
+  }
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(25px)!important;
+  }
+  50%{
+    transform: translateY(0)!important;
+  }
+  100% {
+    transform: translateY(25px) !important;
+  }
+}
+@-webkit-keyframes slideUp {
+  0% {
+    transform: translateY(25px) !important;
+  }
+  50%{
+    transform: translateY(0)!important;
+  }
+  100% {
+    transform: translateY(25px) !important;
+  }
+}
+.fixedHeader{
+  position: fixed;
+  top:0;
+  left: 0;
+  width:100%;
+  height:80px;
+  color:#fff;
+  background-image: linear-gradient(#121212,#12121200);
+}
+@media only screen and (max-width: 810px) {
+  .title{
+    position:absolute;
+    display: block;
+    margin:25vh 0 0 10%;
+  }
+  .aboutme{
+    margin:18vh 0 0 0vh;
+  }
+ .pageTitle{
+  margin:30vh 0 0 5vh;
+ }
+ .pageContents{
+  margin: 1vh 0 0 5vh;
+  width:80%;
+}
+.skillDiag img {
+  display: none;
+}
+.frontAvatar >.rect{
+  transform: translateX(-50%);
+  top: 55vh;
+  left: 50%;
+}
+
+.main{
+  line-height: 45px;
+  font-size: 48px;
+}
+
+
+}
+@media only screen and (max-height: 690px) {
+
+  .scrollDown{
+    display: none;
+    }
+}
+@media only screen and (max-width: 600px) {
+  .title{
+    position:absolute;
+    display: block;
+    margin:25vh 0 0 10%;
+  }
+  .aboutme{
+    margin:18vh 0 0 0vh;
+  }
+ .pageTitle{
+  margin:30vh 0 0 5vh;
+ }
+ .pageContents{
+  margin: 1vh 0 0 5vh;
+  width:80%;
+}
+.skillDiag img {
+  display: none;
+}
+.frontAvatar >.rect{
+  top: 55vh;
+  left: 50%;
+}
+.frontAvatar pre{
+  left:-8px;
+}
+.avatar{
+  width: 160px;
+  transform: translateX(-50%);
+  left: 29%;
+  margin-top:20vh;
+}
+.scrollDown{
+  top:85vh;
+
+}
+.main{
+  line-height: 45px;
+  font-size: 48px;
+}
+}

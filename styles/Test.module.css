@@ -5,6 +5,92 @@
  scroll-snap-type: mandatory; 
  scroll-snap-type: y mandatory;
 }
+.gridPlaceholder > .projectGrid{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vh;
+  display: grid;
+  grid-template-columns: auto auto auto  ;
+  gap: 30px;
+  margin: 50px 0 0 0 ;
+}
+.gridPlaceholder > .projectGrid > .card{
+  position: relative;
+  /* margin-top: 15vh; */
+  background-color: #404040;
+  height: 150px;
+  width: 200px;
+  border-radius: 10px;
+}
+.logoWrap{
+  height: 100vh;
+  width: 50vw;
+  position: absolute;
+}
+.logo{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%) scale(0.4);
+}
+.skillBox{
+  width: 70px;
+  height: 70px;
+  background-color: #313131;
+  border-radius: 10px;
+  margin: auto;
+}
+.skillBox  > .skillImage{
+  margin: 18px;
+}
+.skillGrid{
+  display:grid;
+  /* grid-template-columns: repeat(auto-fill, 125px); */
+  grid-template-columns: auto auto auto auto auto auto auto auto ;
+  gap: 15px;
+  /* grid-auto-flow: column row; */
+/* 
+  justify-content: center;
+  align-content: center; */
+  padding: 0 20vh 0 20vw ;
+}
+.horizontalPlaceholder{
+  height: 70vh;
+  width: 100vw;
+  margin-top: 30vh;
+  overflow-x: scroll;
+
+}
+.gridPlaceholder > .Title{
+  /* position: absolute;
+  left:46%;
+  transform: translateY(-50%); */
+  position: relative;
+  text-align: center;
+  color:white;
+  font-weight:bold;
+  font-size: 21px;
+  margin-top: 7vh;
+  clear: none;
+  z-index: 100;
+
+}
+.gridPlaceholder .subText{
+  /* position: absolute;
+  left:46%;
+  transform: translateY(-50%); */
+  text-align: center;
+  color:white;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 20px;
+  clear: none;
+}
+.horizontalPlaceholder::-webkit-scrollbar {
+  display: none;
+}
+
 .aboutme{
   position: absolute;
   margin: 32vh 0 0 55%;
@@ -21,6 +107,15 @@
   font-weight:bold;
   text-align: center;
   margin:10vh 0 0 auto;
+}
+.horizontalPlaceholder > .Title{
+  color:white;
+  font-weight:bold;
+  font-size: 30px;
+  margin: 14vh 0 0 15vw;
+  float: left;
+  clear: none;
+
 }
 .pageContents{
   color:white;
@@ -197,6 +292,7 @@ background:#1d1e22;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'%0Awidth='24' height='24'%0AviewBox='0 0 24 24'%0Astyle=' fill:%23FFFFFF;'%3E%3Cpath d='M 3 5 A 1.0001 1.0001 0 1 0 3 7 L 21 7 A 1.0001 1.0001 0 1 0 21 5 L 3 5 z M 3 11 A 1.0001 1.0001 0 1 0 3 13 L 21 13 A 1.0001 1.0001 0 1 0 21 11 L 3 11 z M 3 17 A 1.0001 1.0001 0 1 0 3 19 L 21 19 A 1.0001 1.0001 0 1 0 21 17 L 3 17 z'%3E%3C/path%3E%3C/svg%3E") 50% 50% no-repeat;
   background-size: 100%; 
 }
+
 @keyframes fadein {
   from{opacity: 0;}
   to{opacity: 1;}
@@ -291,12 +387,18 @@ background:#1d1e22;
   height:80px;
   color:#fff;
   background-image: linear-gradient(#121212,#12121200);
+  z-index: 5;
 }
 @media only screen and (max-width: 810px) {
   .title{
     position:absolute;
     display: block;
     margin:25vh 0 0 10%;
+  }
+  .logoWrap{
+    height: 50vh;
+    width: 100vw;
+    position: absolute;
   }
   .aboutme{
     margin:18vh 0 0 0vh;
@@ -331,13 +433,43 @@ background:#1d1e22;
     }
 }
 @media only screen and (max-width: 600px) {
+  .logoWrap{
+    height: 50vh;
+  width: 100vw;
+  }
+  .logo{
+    transform: translate(-50%,-50%) scale(0.3);
+  }
+  .skillGrid{
+    margin: 0 0 0 0 ;
+  }
+  .horizontalPlaceholder > .Title{
+
+    font-size: 24px;
+    margin: 12vh 0 0 15vw !important;
+
+  
+  }
+  .gridPlaceholder > .Title{
+   margin-top: 10vh;
+   text-align: left;
+   margin-left: 10vw;
+   font-size: 24px;
+  }
+  .gridPlaceholder > .subText{
+    margin-top: 30px;
+    /* text-align: left; */
+    /* margin-left: 10vw; */
+    font-weight: 300;
+  }
+  
   .title{
     position:absolute;
     display: block;
     margin:25vh 0 0 10%;
   }
   .aboutme{
-    margin:18vh 0 0 0vh;
+    margin:12vh 0 0 0;
   }
  .pageTitle{
   margin:30vh 0 0 5vh;
@@ -366,8 +498,41 @@ background:#1d1e22;
   top:85vh;
 
 }
+.aboutme > .scrollDown{
+  top:72vh;
+}
 .main{
   line-height: 45px;
   font-size: 48px;
 }
+.gridPlaceholder > .projectGrid{
+  /* width: 0; */
+  /* left: 8vh; */
+  gap: 0px;
+  grid-template-columns: auto auto auto    ;
+  /* overflow-y: hidden; */
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-snap-type: mandatory;
+  height: 70vh;
+  width: 100vw;
+}
+.gridPlaceholder > .projectGrid::-webkit-scrollbar {
+  display: none;
+}
+.gridPlaceholder > .projectGrid >.card{
+height: 180px;
+width: 260px;
+margin-left: 40px;
+}
+
+}
+@-moz-document url-prefix() {
+  .frontAvatar  pre{
+    font-size: 11px;
+    top:20px;
+    left: 5px;
+  
+  }
+  
 }

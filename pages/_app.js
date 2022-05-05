@@ -7,6 +7,7 @@ function MyApp({ Component, pageProps }) {
   <Head>
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
   <meta name="theme-color" content="#121212"/>
+  <title>Portfolio | ANSHIL P</title>
   </Head>
   <Component {...pageProps} />
   </>

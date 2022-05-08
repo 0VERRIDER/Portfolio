@@ -297,7 +297,13 @@ export default function Home() {
         <div className={styles.Title}>Projects</div>
         <div className={styles.subText}>Lets take a peek to my recents</div>
        <div className={styles.projectGrid}>
-       <div className={styles.card}></div>
+       <div className={styles.card}>
+         <div className={styles.icon}>
+         <ul><i className={styles.githubBranch}></i></ul>
+         </div>
+         <div className={styles.Title}>Student Id Verification</div>
+         <div className={styles.subText}>FutureReadyTalent</div>
+       </div>
        <div className={styles.card}></div>
        <div className={styles.card}></div>
 
@@ -305,9 +311,6 @@ export default function Home() {
        <div className={styles.card}></div>
        <div className={styles.card}></div>
 
-       <div className={styles.card}></div>
-       <div className={styles.card}></div>
-       <div className={styles.card}></div>
        </div>
       </div>
 

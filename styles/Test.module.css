@@ -23,6 +23,22 @@
   width: 200px;
   border-radius: 10px;
 }
+.gridPlaceholder > .projectGrid > .card:hover{
+  transform: scale(1.05);
+  transition: transform 0.1s;
+}
+.gridPlaceholder > .projectGrid > .card > .learnMoreButton{
+  text-align: center;
+  margin-top: 8px;
+ 
+}
+.gridPlaceholder > .projectGrid > .card > .learnMoreButton > a{
+  color: white;
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 9px;
+
+}
 .logoWrap{
   height: 100vh;
   width: 50vw;
@@ -40,6 +56,10 @@
   background-color: #313131;
   border-radius: 10px;
   margin: auto;
+}
+.skillBox:hover{
+  transform: scale(1.05);
+  transition: transform 0.1s;
 }
 .skillBox  > .skillImage{
   margin: 18px;

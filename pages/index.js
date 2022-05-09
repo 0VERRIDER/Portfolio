@@ -2,6 +2,7 @@ import styles from '../styles/Test.module.css'
 import Logo from './components/logo'
 import { useEffect,useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 const words = ["IoT Fullstack Developer", "Problem Solver", "Programmer","Fullstack Developer"];
 
 export default function Home() {
@@ -303,13 +304,50 @@ export default function Home() {
          </div>
          <div className={styles.Title}>Student Id Verification</div>
          <div className={styles.subText}>FutureReadyTalent</div>
+         <div className={styles.learnMoreButton}><Link href="/">Learn More</Link></div>
        </div>
-       <div className={styles.card}></div>
-       <div className={styles.card}></div>
+       <div className={styles.card}>
+       <div className={styles.icon}>
+         <ul><i className={styles.githubBranch}></i></ul>
+         </div>
+       <div className={styles.Title}>Portfolio</div>
+         <div className={styles.subText}>Personal Project</div>
+         <div className={styles.learnMoreButton}><Link href="/">Learn More</Link></div>
+       </div>
+       <div className={styles.card}>
+       <div className={styles.icon}>
+         <ul><i className={styles.githubBranch}></i></ul>
+         </div>
+       <div className={styles.Title}>StockIT</div>
+         <div className={styles.subText}>MAIORA</div>
+         <div className={styles.learnMoreButton}><Link href="/">Learn More</Link></div>
+       </div>
 
-       <div className={styles.card}></div>
-       <div className={styles.card}></div>
-       <div className={styles.card}></div>
+       <div className={styles.card}>
+       <div className={styles.icon}>
+         <ul><i className={styles.githubBranch}></i></ul>
+         </div>
+       <div className={styles.Title}>User Profile Management</div>
+         <div className={styles.subText}>Personal Project</div>
+         <div className={styles.learnMoreButton}><Link href="/">Learn More</Link></div>
+       </div>
+       <div className={styles.card}>
+       <div className={styles.icon}>
+         <ul><i className={styles.githubBranch}></i></ul>
+         </div>
+       <div className={styles.Title}>API Manger API</div>
+       
+         <div className={styles.subText}>Personal Project</div>
+         <div className={styles.learnMoreButton}><Link href="/">Learn More</Link></div>
+       </div>
+       <div className={styles.card}>
+           <div className={styles.icon}>
+         <ul><i className={styles.githubBranch}></i></ul>
+         </div>
+       <div className={styles.Title}>Student Dashboard</div>
+         <div className={styles.subText}>Karunya</div>
+         <div className={styles.learnMoreButton}><Link href="/">Learn More</Link></div>
+       </div>
 
        </div>
       </div>

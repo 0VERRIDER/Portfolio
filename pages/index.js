@@ -530,7 +530,22 @@ export default function Home() {
         <div className={styles.formPlaceholder}>
           <div className={styles.Title}>So, What You Think?</div>
           <div className={styles.subText}>Get in Touch with me</div>
-       
+          <div className={styles.contactForm}>
+          <form action="/send-data-here" method="post">
+  <input type="email" placeholder="Enter your email"/>
+  <ul className={styles.refreshment}>
+    <li>
+    <input type="radio" id="coffee" name="option" />
+    <label htmlFor="coffee">Coffee</label>
+    </li>
+    <li>
+    <input type="radio" id="tea" name="option" />
+    <label htmlFor="tea">Tea</label>
+    </li>
+  </ul>
+
+</form>          
+</div>
         </div>
       </div>
 

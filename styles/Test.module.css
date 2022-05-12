@@ -1,5 +1,4 @@
 .container {
-  
   overflow: hidden;
   overflow-y: scroll;
   height: 100vh;
@@ -7,10 +6,74 @@
   scroll-snap-type: y mandatory;
 }
 .contactForm{
-  position: relative;
-  left: 46%;
-  transform: translateX(-50%);
+  margin: 50px 0 0 0;
 }
+.contactForm > form > input[type=email]{
+  display: block;
+  width: 30vw;
+  padding: 12px 20px;
+  margin: 0 auto;
+  background: url("data:image/svg+xml,%0A%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 122.88 88.86'%3E%3Ctitle%3Eemail%3C/title%3E%3Cpath fill='%23fff' d='M7.05,0H115.83a7.07,7.07,0,0,1,7,7.05V81.81a7,7,0,0,1-1.22,4,2.78,2.78,0,0,1-.66,1,2.62,2.62,0,0,1-.66.46,7,7,0,0,1-4.51,1.65H7.05a7.07,7.07,0,0,1-7-7V7.05A7.07,7.07,0,0,1,7.05,0Zm-.3,78.84L43.53,40.62,6.75,9.54v69.3ZM49.07,45.39,9.77,83.45h103L75.22,45.39l-11,9.21h0a2.7,2.7,0,0,1-3.45,0L49.07,45.39Zm31.6-4.84,35.46,38.6V9.2L80.67,40.55ZM10.21,5.41,62.39,47.7,112.27,5.41Z'/%3E%3C/svg%3E") no-repeat scroll 12px 12px;
+  padding-left:50px;
+  background-size: 20px;
+  box-sizing: border-box;
+  background-color: #121212;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.contactForm > form  .refreshment{
+  display: block;
+  list-style-type: none;
+  margin: 25px 0 0 0;
+  padding: 0;
+  color: #fff;
+}
+.contactForm > form > .refreshment li{
+  float: left;
+  margin: 0 10px 0 0;
+  width: 15vw;
+  height: 40px;
+  text-align: center;
+  font-weight: 500;
+  position: relative;
+  border: 1px solid #fff;
+  border-radius: 8px;
+}
+.contactForm > form > .refreshment label,
+.contactForm > form > .refreshment input
+{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; 
+  border: 1px solid #fff;
+  border-radius: 8px;
+}
+
+.contactForm > form  input[type="radio"]{
+  opacity: 0.01;
+  z-index: 100;
+
+}
+.contactForm > form  input[type="radio"]:checked+label,
+.Checked+label
+{
+  background: #5B72C3;
+  border: 1px solid #5B72C3;
+  border-radius: 8px;
+}
+
+.contactForm > form  label{
+  padding: 5px;
+  border: 1px solid #CCC;
+  cursor: pointer;
+  z-index: 90;
+}
+
 
 .gridPlaceholder > .projectGrid {
   position: relative;
@@ -613,6 +676,9 @@
     height: 160px;
     width: 220px;
     margin-left: 10px;
+  }
+  .contactForm > form > input[type=email]{
+    width: 70vw;
   }
 }
 @-moz-document url-prefix() {

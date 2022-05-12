@@ -1,11 +1,28 @@
 .container {
-  /* overflow: hidden; */
+  
+  overflow: hidden;
   overflow-y: scroll;
   height: 100vh;
   scroll-snap-type: mandatory;
   scroll-snap-type: y mandatory;
 }
+.contactForm{
+  position: relative;
+  left: 46%;
+  transform: translateX(-50%);
+}
+
 .gridPlaceholder > .projectGrid {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vh;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 30px;
+  margin: 50px 0 0 0;
+}
+.formPlaceholder > .form{
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -25,7 +42,7 @@
 }
 .gridPlaceholder > .projectGrid > .card:hover {
   transform: scale(1.05);
-  transition: transform 0.1s;
+  transition: transform 0.4s;
 }
 .gridPlaceholder > .projectGrid > .card > .learnMoreButton {
   text-align: center;
@@ -76,7 +93,7 @@
 .horizontalPlaceholder {
   height: 70vh;
   width: 100vw;
-  margin-top: 30vh;
+  padding-top: 30vh;
   overflow-x: scroll;
 }
 .gridPlaceholder > .Title {
@@ -88,7 +105,20 @@
   color: white;
   font-weight: bold;
   font-size: 21px;
-  margin-top: 7vh;
+  padding-top: 10vh;
+  clear: none;
+  z-index: 100;
+}
+.formPlaceholder > .Title {
+  /* position: absolute;
+  left:46%;
+  transform: translateY(-50%); */
+  position: relative;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 21px;
+  padding-top: 10.5vh;
   clear: none;
   z-index: 100;
 }
@@ -103,7 +133,18 @@
   color: white;
   font-size: 12px;
   font-weight: 500;
-  margin-top: 20px;
+  margin-top: 10px;
+  clear: none;
+}
+.formPlaceholder > .subText {
+  /* position: absolute;
+  left:46%;
+  transform: translateY(-50%); */
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 5px;
   clear: none;
 }
 .gridPlaceholder > .projectGrid > .card > .Title {
@@ -159,7 +200,9 @@
   height: 100vh;
   scroll-snap-align: start;
   position: relative;
-  overflow: hidden;
+  overflow: none;
+  background-color: #121212;
+
 }
 .main {
   line-height: 58px;
@@ -480,21 +523,31 @@
   .logo {
     transform: translate(-50%, -50%) scale(0.3);
   }
-  .skillGrid {
-    margin: 0 0 0 0;
-  }
+ 
   .horizontalPlaceholder > .Title {
     font-size: 24px;
     margin: 12vh 0 0 15vw !important;
   }
   .gridPlaceholder > .Title {
-    margin-top: 9.2vh;
+    padding-top: 15vh;
     text-align: center;
 
     font-size: 24px;
   }
   .gridPlaceholder > .subText {
-    margin-top: 50px;
+    margin-top: 10px;
+    /* text-align: left; */
+    /* margin-left: 10vw; */
+    font-weight: 300;
+  }
+  .formPlaceholder > .Title {
+    padding-top: 15vh;
+    text-align: center;
+
+    font-size: 24px;
+  }
+  .formPlaceholder > .subText {
+    margin-top: 10px;
     /* text-align: left; */
     /* margin-left: 10vw; */
     font-weight: 300;

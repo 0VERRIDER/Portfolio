@@ -59,7 +59,7 @@ export default function Home() {
         setShow(true);
         setCompileStat(true);
         clearTimeout(timeout2);
-      }, 6000);
+      }, 4000);
     }
 
     return () => {
@@ -527,10 +527,10 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.child}>
-        <div className={styles.gridPlaceholder}>
-          <div className={styles.Title}>Projects</div>
-          <div className={styles.subText}>Lets take a peek to my recents</div>
-          <div className={styles.projectGrid}></div>
+        <div className={styles.formPlaceholder}>
+          <div className={styles.Title}>So, What You Think?</div>
+          <div className={styles.subText}>Get in Touch with me</div>
+       
         </div>
       </div>
 

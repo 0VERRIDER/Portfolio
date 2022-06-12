@@ -51,7 +51,7 @@ export default function Home() {
 
     const timeout = setTimeout(() => {
       setSubIndex((prev) => prev + (reverse ? -1 : 1));
-    }, Math.max(reverse ? 75 : subIndex === words[index].length ? 3000 : 150, parseInt(Math.random() * 350)));
+    }, Math.max(reverse ? 75 : subIndex === words[index].length ? 100 : 70, parseInt(Math.random() * 250)));
 
     if (index == words.length - 1) {
       const timeout2 = setTimeout(() => {
@@ -531,19 +531,21 @@ export default function Home() {
           <div className={styles.Title}>So, What You Think?</div>
           <div className={styles.subText}>Get in Touch with me</div>
           <div className={styles.contactForm}>
-          <form action="/send-data-here" method="post">
+          <form >
   <input type="email" placeholder="Enter your email"/>
-  <ul className={styles.refreshment}>
-    <li>
-    <input type="radio" id="coffee" name="option" />
+  <div className={styles.refreshments}>
+    <div>
+    <input type="radio" id="coffee" name="option" value="coffee" defaultChecked />
     <label htmlFor="coffee">Coffee</label>
-    </li>
-    <li>
-    <input type="radio" id="tea" name="option" />
+    </div>
+    <div>
+    <input type="radio" id="tea" name="option" value="tea" />
     <label htmlFor="tea">Tea</label>
-    </li>
-  </ul>
-
+    </div>
+</div>
+<div className={styles.submitButton}>
+<button type="submit">Send</button>
+</div>
 </form>          
 </div>
         </div>

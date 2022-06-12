@@ -30,7 +30,7 @@
   padding: 0;
   margin: 20px auto;
   color: #fff;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: row;
   gap: 10px;
 }

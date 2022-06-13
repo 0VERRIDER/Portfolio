@@ -536,15 +536,15 @@ export default function Home() {
   <div className={styles.refreshments}>
     <div>
     <input type="radio" id="coffee" name="option" value="coffee" defaultChecked />
-    <label htmlFor="coffee">Coffee</label>
+    <label htmlFor="coffee"><span className={styles.coffee}></span> Coffee</label>
     </div>
     <div>
     <input type="radio" id="tea" name="option" value="tea" />
-    <label htmlFor="tea">Tea</label>
+    <label htmlFor="tea"><span className={styles.tea}></span> Tea</label>
     </div>
 </div>
 <div className={styles.submitButton}>
-<button type="submit">Send</button>
+<button type="submit">Send <span className={styles.sendIcon}></span></button>
 </div>
 
 </form>   

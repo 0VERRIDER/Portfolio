@@ -88,7 +88,6 @@ export default function Home() {
   //     else{
   //       clearInterval(interval);
   //     }
-
   //   },6000);
   //   return () => {
   //     clearInterval(interval);

@@ -532,7 +532,7 @@ export default function Home() {
           <div className={styles.subText}>Get in Touch with me</div>
           <div className={styles.contactForm}>
           <form >
-  <input type="email" placeholder="Enter your email"/>
+  <input type="email" placeholder="Enter your email" required/>
   <div className={styles.refreshments}>
     <div>
     <input type="radio" id="coffee" name="option" value="coffee" defaultChecked />
@@ -546,7 +546,14 @@ export default function Home() {
 <div className={styles.submitButton}>
 <button type="submit">Send</button>
 </div>
-</form>          
+
+</form>   
+<div className={styles.socialIcons}>
+<span className={styles.instagram}></span>
+<span className={styles.github}></span>
+<span className={styles.email}></span>
+
+  </div> 
 </div>
         </div>
       </div>

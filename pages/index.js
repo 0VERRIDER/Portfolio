@@ -168,7 +168,8 @@ export default function Home() {
       </div>
       <div className={styles.child}>
         <div className={styles.logoWrap}>
-          <Logo className={styles.logo}></Logo>
+          <Logo className={styles.logo} width={345}
+    height={292}></Logo>
         </div>
         <div className={styles.aboutme}>
           <div className={styles.pageTitle}>About me</div>

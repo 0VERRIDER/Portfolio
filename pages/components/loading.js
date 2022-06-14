@@ -1,4 +1,4 @@
-export default `
+styles = `
 #globalLoader{
     position: fixed;
     z-index: 1700;
@@ -18,4 +18,6 @@ export default `
 #logo {
   transform:scale(2.0);
   }
-`;
+`
+
+export default styles;

@@ -1,5 +1,5 @@
 import styles from "../styles/Test.module.css";
-import Logo from "./components/logo";
+import Logo from "../components/logo";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";

@@ -174,14 +174,13 @@ export default function Home() {
         <div className={styles.aboutme}>
           <div className={styles.pageTitle}>About me</div>
           <div className={styles.pageContents}>
-            I&apos;m a <b>Fullstack developer</b> who can handle both hardware
+            I&apos;m an <b>IoT Fullstack developer</b> who can handle both hardware
             and software together. Im polishing my skills almost everyday and
             eager to learn something new everyday.<br></br>
             Open source contribution was my favorite and looking forward to a
-            team to collabrate and learn more. <br></br>
-            <br></br>
-            Yep, Im not gonna bore you with long texts.<br></br>
-            OK Cool. Scroll to know about me more.
+            team to collaborate and learn more. <br/><br/>
+
+            Scroll down to know more about me.
           </div>
           <div
             className={`${styles.scrollDown} ${
@@ -442,6 +441,17 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div
+            className={`${styles.scrollDown} ${
+              show ? styles.showField : styles.hideField
+            }`}
+          >
+            <div className={styles.field}>
+              <div className={styles.scroll}></div>
+
+              {/* <div className={styles.scroll}></div> */}
+            </div>
+          </div>
       </div>
 
       <div className={styles.child}>
@@ -525,6 +535,17 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div
+            className={`${styles.scrollDown} ${
+              show ? styles.showField : styles.hideField
+            }`}
+          >
+            <div className={styles.field}>
+              <div className={styles.scroll}></div>
+
+              {/* <div className={styles.scroll}></div> */}
+            </div>
+          </div>
       </div>
       <div className={styles.child}>
         <div className={styles.formPlaceholder}>

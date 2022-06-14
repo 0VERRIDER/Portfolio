@@ -1,4 +1,6 @@
-var styles = `
+import css from 'styled-jsx/css';
+
+export default css.global `
 #globalLoader{
     position: fixed;
     z-index: 1700;
@@ -18,6 +20,4 @@ var styles = `
 #logo {
   transform:scale(2.0);
   }
-`
-
-export default styles;
+`;

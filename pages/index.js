@@ -549,9 +549,9 @@ export default function Home() {
 
 </form>   
 <div className={styles.socialIcons}>
-<span className={styles.instagram}></span>
-<span className={styles.github}></span>
-<span className={styles.email}></span>
+<Link href={"https://instagram.com/anshil.me"} passHref={true}><span className={styles.instagram}></span></Link>
+<Link href={"https://github.com/0VERRIDER"} passHref={true}><span className={styles.github}></span></Link>
+<Link href={"mailto:admin@anshil.me"} passHref={true}><span className={styles.email}></span></Link>
 
   </div> 
 </div>

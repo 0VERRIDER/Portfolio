@@ -1,4 +1,4 @@
-styles = `
+var styles = `
 #globalLoader{
     position: fixed;
     z-index: 1700;

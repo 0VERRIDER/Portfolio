@@ -557,7 +557,7 @@ export default function Home() {
           <div className={styles.contactForm}>
           <form  name="contact" method="POST" data-netlify="true">
             <div className={styles.clientMail}>
-  <input type="email" placeholder="Enter your email" name="email" required/>
+  <input type="email" name="email" required/>
   </div>
   <div className={styles.refreshments}>
     <div>

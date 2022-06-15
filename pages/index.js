@@ -556,9 +556,9 @@ export default function Home() {
           <div className={styles.subText}>Get in Touch with me</div>
           <div className={styles.contactForm}>
           <form  name="contact" method="POST" data-netlify="true">
-            <div className={styles.clientMail}>
+          <input type="hidden" name="form-name" value="contact" />
+         
   <input type="email" name="email" placeholder={"Enter your email"} required/>
-  </div>
   <div className={styles.refreshments}>
     <div>
     <input type="radio" id="coffee" name="refreshments" value="coffee" />

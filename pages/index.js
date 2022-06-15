@@ -555,7 +555,7 @@ export default function Home() {
           <div className={styles.Title}>So, What You Think?</div>
           <div className={styles.subText}>Get in Touch with me</div>
           <div className={styles.contactForm}>
-          <form name="contact" method="POST" data-netlify="true">
+          <form  >
   <input type="email" placeholder="Enter your email" name="email" required/>
   <div className={styles.refreshments}>
     <div>

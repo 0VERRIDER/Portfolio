@@ -785,7 +785,7 @@ transition: all 0.5s;
     margin-left: 10px;
   }
   .contactForm > form > input[type=email]{
-    width: 80vw;
+    width: 80vw !important;
   }
   .contactForm > form  .refreshments{
     width: 80vw;

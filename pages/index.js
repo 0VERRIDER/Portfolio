@@ -15,6 +15,16 @@ export default function Home() {
   const [btnState, setBtnState] = useState(false);
   const handleForm = (e)=>{
     e.preventDefault();
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": e.target.getAttribute("name"),
+        ...name,
+      }),
+    })
+      .then(() => alert("Sent"))
+      .catch((error) => alert(error));
     setBtnState(true);
     const timer = setTimeout(()=>{
       document.getElementById("contact").style.display = "none";

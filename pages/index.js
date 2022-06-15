@@ -12,7 +12,18 @@ const words = [
 ];
 
 export default function Home() {
-  
+  const [btnState, setBtnState] = useState(false);
+  const handleForm = (e)=>{
+    e.preventDefault();
+    setBtnState(true);
+    const timer = setTimeout(()=>{
+      document.getElementById("contact").style.display = "none";
+    document.getElementsByClassName("ThankyouMessage")[0].style.display = "block";
+    document.getElementsByClassName("contactTitle")[0].style.display = "none";
+    document.getElementsByClassName("contactTitle")[1].style.display = "none";
+    },2000);
+    
+  };
   ////////////////////////////////////////
   const [show, setShow] = useState(false);
   const [skillSlide, setSkill] = useState(0);
@@ -552,10 +563,33 @@ export default function Home() {
       </div>
       <div className={styles.child}>
         <div className={styles.formPlaceholder}>
-          <div className={styles.Title}>So, What You Think?</div>
-          <div className={styles.subText}>Get in Touch with me</div>
+          <div className={styles.Title + ' ' + "contactTitle"} >So, What You Think?</div>
+          <div className={styles.subText + ' ' + "contactTitle"} >Get in Touch with me</div>
           <div className={styles.contactForm}>
-          <form  name="contact" method="POST" data-netlify="true">
+            <div className={styles.thankyoumessage + ' '+ 'ThankyouMessage'}>
+            <div className={styles.successIcon}>
+            <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="48"
+      height="48"
+      fill="none"
+      viewBox="0 0 48 48"
+    >
+      <circle cx="24" cy="24" r="24" fill="#fff"></circle>
+      <circle cx="24" cy="24" r="21" fill="#28C225"></circle>
+      <path
+        stroke="#fff"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.781"
+        d="M16.125 25.125l5.25 5.25 10.5-11.25"
+      ></path>
+    </svg>
+    </div>
+                <div className={styles.main}>Yeyy hii, Email has been sent!</div>
+                <div className={styles.sub}>I will contact you soon!!</div>
+            </div>
+          <form  name="contact" method="POST" data-netlify="true" onSubmit={handleForm} id="contact" className={styles.contact}>
           <input type="hidden" name="form-name" value="contact" />
          
   <input type="email" name="email" placeholder={"Enter your email"} required/>
@@ -569,8 +603,10 @@ export default function Home() {
     <label htmlFor="tea"><span className={styles.tea}></span> Tea</label>
     </div>
 </div>
+<textarea id="w3reviemessagew" name="message" rows="3" cols="50" placeholder="Message (Optional)">
+  </textarea>
 <div className={styles.submitButton}>
-<button type="submit">Send <span className={styles.sendIcon}></span></button>
+<button type="submit" disabled={btnState}>{btnState?"Sending...":  ( <> <span className={styles.sendIcon}></span> Send </>  )}</button>
 </div>
 
 </form>   

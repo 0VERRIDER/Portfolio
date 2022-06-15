@@ -5,6 +5,25 @@
   scroll-snap-type: mandatory;
   scroll-snap-type: y mandatory;
 }
+
+.contactForm > .thankyoumessage{
+  position: relative;
+  text-align: center;
+  padding: 30vh 0 25vh 0;
+  display:none
+}
+.successIcon{
+  padding-bottom: 3vh;
+  transform: scale(1.5);
+}
+.contactForm > .thankyoumessage > .main{
+  font-size: 18px !important;
+}
+.contactForm > .thankyoumessage > .sub{
+  font-size: 14px;
+  color: white;
+  font-weight: 200;
+}
 .contactForm{
   margin: 50px 0 0 0;
 }
@@ -12,7 +31,7 @@
   width:250px;
   height:50px;
   display:flex;
-  margin: 20vh auto;
+  margin: 10vh auto;
   justify-content: space-around;
   align-items: center;
 }
@@ -31,7 +50,22 @@
   color: #fff;
   font-weight: bold;
 }
-
+.contactForm > form >   textarea{
+  display: block;
+  width: 400px !important;
+  padding: 20px 20px;
+  margin: 0 auto;
+  background: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' viewBox='0 0 512 512' style='fill:%23fff'%3E%3Cpath d='M0 132.5h455v30H0zM0 52.5h455v30H0zM0 372.5h455v30H0zM0 292.5h455v30H0zM0 212.5h455v30H0z'/%3E%3C/svg%3E%0A") no-repeat scroll 20px 22px;
+  padding-left:60px;
+  background-size: 20px;
+  box-sizing: border-box;
+  background-color: #121212;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  line-height: 25px;
+}
 .contactForm > form  .refreshments{
   display: flex;
   width:400px;
@@ -102,6 +136,11 @@ background-color: transparent;
 }
 .contactForm > form div>button:hover{
   background-color: #5B72C3;
+transition: all 0.5s;
+}
+.contactForm > form div>button:disabled{
+  background-color: #ccc;
+  color:#121212;
 transition: all 0.5s;
 }
 .gridPlaceholder > .projectGrid {
@@ -210,7 +249,7 @@ transition: all 0.5s;
   color: white;
   font-weight: bold;
   font-size: 21px;
-  padding-top: 20.5vh;
+  padding-top: 12vh;
   clear: none;
   z-index: 100;
 }
@@ -540,8 +579,8 @@ transition: all 0.5s;
   width: 14px;
   color: #ffffff;
   height: 14px;
-  margin-left: 10px;
-  background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='fill:%23fff'%3E%3Cpath d='M0 12l11 3.1 7-8.1-8.156 5.672-4.312-1.202 15.362-7.68-3.974 14.57-3.75-3.339-2.17 2.925v-.769l-2-.56v7.383l4.473-6.031 4.527 4.031 6-22z'/%3E%3C/svg%3E");
+  margin-right: 10px;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='20px' height='18px' viewBox='0 0 20 18' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3Esend%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Icons' stroke='%23fff' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Rounded' transform='translate(-374.000000, -1529.000000)' %3E%3Cg id='Content' transform='translate(100.000000, 1428.000000)' %3E%3Cg id='-Round-/-Content-/-send' transform='translate(272.000000, 98.000000)'%3E%3Cg%3E%3Cpolygon id='Path' points='0 0 24 0 24 24 0 24' %3E%3C/polygon%3E%3Cpath d='M3.4,20.4 L20.85,12.92 C21.66,12.57 21.66,11.43 20.85,11.08 L3.4,3.6 C2.74,3.31 2.01,3.8 2.01,4.51 L2,9.12 C2,9.62 2.37,10.05 2.87,10.11 L17,12 L2.87,13.88 C2.37,13.95 2,14.38 2,14.88 L2.01,19.49 C2.01,20.2 2.74,20.69 3.4,20.4 Z' id='🔹Icon-Color' fill='%23fff'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -711,7 +750,7 @@ transition: all 0.5s;
     font-weight: 300;
   }
   .formPlaceholder > .Title {
-    padding-top: 19vh;
+    padding-top: 14vh;
     text-align: center;
 
     font-size: 24px;
@@ -785,6 +824,9 @@ transition: all 0.5s;
     margin-left: 10px;
   }
   .contactForm > form > input[type=email]{
+    width: 80vw !important;
+  }
+  .contactForm > form > textarea{
     width: 80vw !important;
   }
   .contactForm > form  .refreshments{

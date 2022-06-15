@@ -566,7 +566,7 @@ export default function Home() {
   <input type="email" name="email" placeholder={"Enter your email"} required/>
   <div className={styles.refreshments}>
     <div>
-    <input type="radio" id="coffee" name="refreshments" value="coffee" checked="checked"/>
+    <input type="radio" id="coffee" name="refreshments" value="coffee" defaultChecked/>
     <label htmlFor="coffee"><span className={styles.coffee}></span> Coffee</label>
     </div>
     <div>

@@ -14,30 +14,8 @@ const words = [
 export default function Home() {
   const [btnState, setBtnState] = useState(false);
   const handleForm = (e)=>{
-    var formBody =[];
-    var elements = document.forms['contact'].elements;
     e.preventDefault();
-    for (var property in elements) {
-      var encodedKey = encodeURIComponent(property);
-      var encodedValue = encodeURIComponent(elements[property]);
-      formBody.push(encodedKey + "=" + encodedValue);
-    }
-    formBody = formBody.join("&");
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: formBody,
-    })
-      .then(() => alert("Sent"))
-      .catch((error) => alert(error));
     setBtnState(true);
-    const timer = setTimeout(()=>{
-      document.getElementById("contact").style.display = "none";
-    document.getElementsByClassName("ThankyouMessage")[0].style.display = "block";
-    document.getElementsByClassName("contactTitle")[0].style.display = "none";
-    document.getElementsByClassName("contactTitle")[1].style.display = "none";
-    },2000);
-    
   };
   ////////////////////////////////////////
   const [show, setShow] = useState(false);
@@ -581,30 +559,8 @@ export default function Home() {
           <div className={styles.Title + ' ' + "contactTitle"} >So, What You Think?</div>
           <div className={styles.subText + ' ' + "contactTitle"} >Get in Touch with me</div>
           <div className={styles.contactForm}>
-            <div className={styles.thankyoumessage + ' '+ 'ThankyouMessage'}>
-            <div className={styles.successIcon}>
-            <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="48"
-      height="48"
-      fill="none"
-      viewBox="0 0 48 48"
-    >
-      <circle cx="24" cy="24" r="24" fill="#fff"></circle>
-      <circle cx="24" cy="24" r="21" fill="#28C225"></circle>
-      <path
-        stroke="#fff"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1.781"
-        d="M16.125 25.125l5.25 5.25 10.5-11.25"
-      ></path>
-    </svg>
-    </div>
-                <div className={styles.main}>Yeyy hii, Email has been sent!</div>
-                <div className={styles.sub}>I will contact you soon!!</div>
-            </div>
-          <form  name="contact" method="POST" data-netlify="true" onSubmit={handleForm} id="contact" className={styles.contact}>
+           
+          <form  name="contact" method="POST" data-netlify="true" action="/emailed" id="contact" className={styles.contact}>
           <input type="hidden" name="form-name" value="contact" />
          
   <input type="email" name="email" placeholder={"Enter your email"} required/>

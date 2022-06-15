@@ -3,6 +3,7 @@ import Logo from "../components/logo";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import axios from 'axios';
 const words = [
   "IoT Fullstack Developer",
   "Problem Solver",
@@ -11,6 +12,8 @@ const words = [
 ];
 
 export default function Home() {
+  
+  ////////////////////////////////////////
   const [show, setShow] = useState(false);
   const [skillSlide, setSkill] = useState(0);
   const [complieStat, setCompileStat] = useState(false);
@@ -552,11 +555,11 @@ export default function Home() {
           <div className={styles.Title}>So, What You Think?</div>
           <div className={styles.subText}>Get in Touch with me</div>
           <div className={styles.contactForm}>
-          <form >
-  <input type="email" placeholder="Enter your email" required/>
+          <form name="contact" method="POST" data-netlify="true">
+  <input type="email" placeholder="Enter your email" name="email" required/>
   <div className={styles.refreshments}>
     <div>
-    <input type="radio" id="coffee" name="option" value="coffee" defaultChecked />
+    <input type="radio" id="coffee" name="refreshments" value="coffee" defaultChecked />
     <label htmlFor="coffee"><span className={styles.coffee}></span> Coffee</label>
     </div>
     <div>

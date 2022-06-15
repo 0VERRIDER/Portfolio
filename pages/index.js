@@ -555,15 +555,17 @@ export default function Home() {
           <div className={styles.Title}>So, What You Think?</div>
           <div className={styles.subText}>Get in Touch with me</div>
           <div className={styles.contactForm}>
-          <form  >
+          <form  name="contact" method="POST" data-netlify="true">
+            <div>
   <input type="email" placeholder="Enter your email" name="email" required/>
+  </div>
   <div className={styles.refreshments}>
     <div>
-    <input type="radio" id="coffee" name="refreshments" value="coffee" defaultChecked />
+    <input type="radio" id="coffee" name="refreshments" value="coffee" />
     <label htmlFor="coffee"><span className={styles.coffee}></span> Coffee</label>
     </div>
     <div>
-    <input type="radio" id="tea" name="option" value="tea" />
+    <input type="radio" id="tea" name="refreshments" value="tea" />
     <label htmlFor="tea"><span className={styles.tea}></span> Tea</label>
     </div>
 </div>

@@ -14,14 +14,19 @@ const words = [
 export default function Home() {
   const [btnState, setBtnState] = useState(false);
   const handleForm = (e)=>{
+    var formBody =[];
+    var elements = document.forms['contact'].elements;
     e.preventDefault();
+    for (var property in elements) {
+      var encodedKey = encodeURIComponent(property);
+      var encodedValue = encodeURIComponent(elements[property]);
+      formBody.push(encodedKey + "=" + encodedValue);
+    }
+    formBody = formBody.join("&");
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": e.target.getAttribute("name"),
-        ...name,
-      }),
+      body: formBody,
     })
       .then(() => alert("Sent"))
       .catch((error) => alert(error));

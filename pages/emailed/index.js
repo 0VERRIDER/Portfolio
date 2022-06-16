@@ -1,15 +1,6 @@
 import styles from "../../styles/Test.module.css";
-import Logo from "../../components/logo";
-import { useEffect, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
-import axios from 'axios';
-const words = [
-  "IoT Fullstack Developer",
-  "Problem Solver",
-  "Programmer",
-  "Fullstack Developer",
-];
+
 
 export default function Emailed() {
 return(<div className={styles.container}>

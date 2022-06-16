@@ -5,7 +5,58 @@
   scroll-snap-type: mandatory;
   scroll-snap-type: y mandatory;
 }
+.sideNav{
+  position: fixed;
+  left:0;
+  top:0;
+  z-index: 9;
+  height: 100%;
+  width:100%;
+  background-color: #121212;
+  display: none;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  line-height: 65px;
+ 
+}
+.noselect{
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+.sideNav .items{
+  padding-top: 14vh ;
+  list-style-type: none;
+}
+.active{
+  text-decoration: underline 10px !important;
 
+}
+.sideNav .items li:hover{
+  text-decoration: underline 5px dashed;
+}
+.sideNav .resumeButton{
+  margin-top:50px;
+  box-sizing: border-box;
+width: 250px;
+height: 55px;
+border: 2px solid #fff;
+border-radius: 5px;
+font-size: 16px;
+font-weight: bold;
+color:white;
+background-color: transparent;
+transition: all 0.4s;
+}
+.sideNav .resumeButton:hover{
+  background-color: #5B72C3;
+  transition: all 0.4s;
+
+}
 .contactForm > .thankyoumessage{
   position: relative;
   text-align: center;
@@ -100,7 +151,7 @@
 
 .contactForm > form  input[type="radio"]{
   opacity: 0.01;
-  z-index: 100;
+  /* z-index: 100; */
 
 }
 .contactForm > form  input[type="radio"]:checked+label,
@@ -115,7 +166,7 @@
   padding: 13px;
   border: 1px solid #CCC;
   cursor: pointer;
-  z-index: 90;
+  /* z-index: 90; */
 }
 .contactForm>form .submitButton{
 display:flex;
@@ -238,7 +289,7 @@ transition: all 0.5s;
   font-size: 21px;
   padding-top: 10vh;
   clear: none;
-  z-index: 100;
+  /* z-index: 100; */
 }
 .formPlaceholder > .Title {
   /* position: absolute;
@@ -251,7 +302,7 @@ transition: all 0.5s;
   font-size: 21px;
   padding-top: 12vh;
   clear: none;
-  z-index: 100;
+  /* z-index: 100; */
 }
 .gridPlaceholder > .projectGrid {
   gap: 15px;
@@ -481,8 +532,14 @@ transition: all 0.5s;
   animation: wheel 2s infinite;
   -webkit-animation: wheel 2s infinite;
 }
+.openedMenu{
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px'%0Awidth='24' height='24'%0AviewBox='0 0 24 24'%0Astyle=' fill:%23fff;'%3E%3Cpath d='M 4.7070312 3.2929688 L 3.2929688 4.7070312 L 10.585938 12 L 3.2929688 19.292969 L 4.7070312 20.707031 L 12 13.414062 L 19.292969 20.707031 L 20.707031 19.292969 L 13.414062 12 L 20.707031 4.7070312 L 19.292969 3.2929688 L 12 10.585938 L 4.7070312 3.2929688 z'%3E%3C/path%3E%3C/svg%3E")
+    50% 50% no-repeat !important;
+    transition: all 1s;
+}
 .menuIcon {
   position: absolute;
+  transition: all 1s;
   right: 50px;
   top: 30px;
   display: inline-block;
@@ -682,7 +739,7 @@ transition: all 0.5s;
   height: 80px;
   color: #fff;
   background-image: linear-gradient(#121212, #12121200);
-  z-index: 5;
+  z-index: 10;
 }
 @media only screen and (max-width: 810px) {
   .title {

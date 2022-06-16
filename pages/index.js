@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import axios from 'axios';
+import {useRouter} from "next/router";
 const words = [
   "IoT Fullstack Developer",
   "Problem Solver",
@@ -12,10 +13,20 @@ const words = [
 ];
 
 export default function Home() {
+  const router = useRouter();
   const [btnState, setBtnState] = useState(false);
-  const handleForm = (e)=>{
-    e.preventDefault();
-    setBtnState(true);
+  const [navState, setNavState] = useState(false);
+  const navSwitch = ()=>{
+    if(!navState){
+      document.querySelector(`.${styles.sideNav}`).style.display="flex";
+      setNavState(true);
+      return false;
+    }
+    else{
+      document.querySelector(`.${styles.sideNav}`).style.display="none";
+      setNavState(false);
+      return true;
+    }
   };
   ////////////////////////////////////////
   const [show, setShow] = useState(false);
@@ -103,7 +114,7 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.child}>
+      <div className={styles.child} id="Home">
         <div className={styles.title}>
           <span className={styles.main}>
             <span className={styles.greetings}>Hi.</span>
@@ -173,7 +184,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className={styles.child}>
+      <div className={styles.child} id="AboutMe">
         <div className={styles.logoWrap}>
           <Logo className={styles.logo} width={345}
     height={292}></Logo>
@@ -202,7 +213,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className={styles.child}>
+      <div className={styles.child} id="Skills">
         <div className={styles.horizontalPlaceholder}>
           <div className={styles.Title}>Skills</div>
           <div className={styles.skillGrid}>
@@ -461,7 +472,7 @@ export default function Home() {
           </div>
       </div>
 
-      <div className={styles.child}>
+      <div className={styles.child} id="Projects">
         <div className={styles.gridPlaceholder}>
           <div className={styles.Title}>Projects</div>
           <div className={styles.subText}>Lets take a peek to my recents</div>
@@ -554,7 +565,7 @@ export default function Home() {
             </div>
           </div>
       </div>
-      <div className={styles.child}>
+      <div className={styles.child} id="ContactMe">
         <div className={styles.formPlaceholder}>
           <div className={styles.Title + ' ' + "contactTitle"} >So, What You Think?</div>
           <div className={styles.subText + ' ' + "contactTitle"} >Get in Touch with me</div>
@@ -590,10 +601,26 @@ export default function Home() {
 </div>
         </div>
       </div>
+<div className={styles.sideNav}>
+<ul className={styles.items}>
+  <Link passHref={true} href="#Home" ><a onClick={()=>{navSwitch()}}><li className={router.asPath == '/#Home'?styles.noselect+ ' ' + styles.active:styles.noselect} >Home</li></a></Link>
+  <Link passHref={true} href="#AboutMe" ><a onClick={()=>{navSwitch()}}><li className={router.asPath == '/#AboutMe'?styles.noselect+ ' ' + styles.active:styles.noselect}>About me</li></a></Link>
+  <Link passHref={true} href="#Skills" ><a onClick={()=>{navSwitch()}}><li className={router.asPath == '/#Skills'?styles.noselect+ ' ' + styles.active:styles.noselect}>Skills</li></a></Link>
+  <Link passHref={true} href="#Projects" ><a onClick={()=>{navSwitch()}}><li className={router.asPath == '/#Projects'?styles.noselect+ ' ' + styles.active:styles.noselect}>Projects</li></a></Link>
+  <Link passHref={true} href="#ContactMe" ><a onClick={()=>{navSwitch()}}><li className={router.asPath == '/#ContactMe'?styles.noselect+ ' ' + styles.active:styles.noselect}>Contact Me</li></a></Link>
+  <li ><Link href={"https://www.dropbox.com/s/lyzfotvwpcyyhre/ANSHIL_P_URK19EC2010_RESUME.pdf?dl=1"} passHref={true}><button className={styles.resumeButton}>Resume</button></Link></li>
+  <li><div className={styles.socialIcons}>
+<Link href={"https://instagram.com/anshil.me"} passHref={true}><span className={styles.instagram}></span></Link>
+<Link href={"https://github.com/0VERRIDER"} passHref={true}><span className={styles.github}></span></Link>
+<Link href={"mailto:admin@anshil.me"} passHref={true}><span className={styles.email}></span></Link>
 
-      <div className={styles.fixedHeader}>
+  </div> </li>
+</ul>
+
+</div>
+      <div className={styles.fixedHeader}   >
         <ul>
-          <i className={styles.menuIcon}></i>
+          <i className={ navState?styles.menuIcon +' '+styles.openedMenu:styles.menuIcon} onClick={navSwitch}></i>
         </ul>
       </div>
     </div>

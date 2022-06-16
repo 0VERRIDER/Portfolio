@@ -16,6 +16,13 @@ export default function Home() {
   const router = useRouter();
   const [btnState, setBtnState] = useState(false);
   const [navState, setNavState] = useState(false);
+  const [dwnldState,setDwnldState] = useState(false);
+  const resumeDownload = ()=>{
+    setDwnldState(true);
+    const timer = setTimeout(() => {
+      setDwnldState(false);
+    }, 8000);
+  }
   const navSwitch = ()=>{
     if(!navState){
       document.querySelector(`.${styles.sideNav}`).style.display="flex";
@@ -608,7 +615,7 @@ export default function Home() {
   <Link passHref={true} href="#Skills" ><a onClick={()=>{navSwitch()}}><li className={router.asPath == '/#Skills'?styles.noselect+ ' ' + styles.active:styles.noselect}>Skills</li></a></Link>
   <Link passHref={true} href="#Projects" ><a onClick={()=>{navSwitch()}}><li className={router.asPath == '/#Projects'?styles.noselect+ ' ' + styles.active:styles.noselect}>Projects</li></a></Link>
   <Link passHref={true} href="#ContactMe" ><a onClick={()=>{navSwitch()}}><li className={router.asPath == '/#ContactMe'?styles.noselect+ ' ' + styles.active:styles.noselect}>Contact Me</li></a></Link>
-  <li ><Link href={"https://www.dropbox.com/s/lyzfotvwpcyyhre/ANSHIL_P_URK19EC2010_RESUME.pdf?dl=1"} passHref={true}><button className={styles.resumeButton}>Resume</button></Link></li>
+  <li ><Link href={"https://www.dropbox.com/s/lyzfotvwpcyyhre/ANSHIL_P_URK19EC2010_RESUME.pdf?dl=1"} passHref={true}><a onClick={resumeDownload}><button className={styles.resumeButton}>{dwnldState?"Downloading...":"Resume"}</button></a></Link></li>
   <li><div className={styles.socialIcons}>
 <Link href={"https://instagram.com/anshil.me"} passHref={true}><span className={styles.instagram}></span></Link>
 <Link href={"https://github.com/0VERRIDER"} passHref={true}><span className={styles.github}></span></Link>

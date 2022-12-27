@@ -493,7 +493,7 @@ export default function Home() {
               <div className={styles.Title}>Student Id Verification</div>
               <div className={styles.subText}>FutureReadyTalent</div>
               <div className={styles.learnMoreButton}>
-                <Link href="/">Learn More</Link>
+                <Link href="https://github.com/0VERRIDER/student-id-verification">Learn More</Link>
               </div>
             </div>
             <div className={styles.card}>
@@ -505,7 +505,7 @@ export default function Home() {
               <div className={styles.Title}>Portfolio</div>
               <div className={styles.subText}>Personal Project</div>
               <div className={styles.learnMoreButton}>
-                <Link href="/">Learn More</Link>
+                <Link href="https://github.com/0VERRIDER/Portfolio">Learn More</Link>
               </div>
             </div>
             <div className={styles.card}>
@@ -517,7 +517,7 @@ export default function Home() {
               <div className={styles.Title}>StockIT</div>
               <div className={styles.subText}>MAIORA</div>
               <div className={styles.learnMoreButton}>
-                <Link href="/">Learn More</Link>
+                <Link href="/classified">Learn More</Link>
               </div>
             </div>
 
@@ -530,7 +530,7 @@ export default function Home() {
               <div className={styles.Title}>User Profile Management</div>
               <div className={styles.subText}>Personal Project</div>
               <div className={styles.learnMoreButton}>
-                <Link href="/">Learn More</Link>
+                <Link href="https://github.com/0VERRIDER/User-Profile-Management">Learn More</Link>
               </div>
             </div>
             <div className={styles.card}>
@@ -543,7 +543,7 @@ export default function Home() {
 
               <div className={styles.subText}>Personal Project</div>
               <div className={styles.learnMoreButton}>
-                <Link href="/">Learn More</Link>
+                <Link href="https://github.com/0VERRIDER/API-Manager">Learn More</Link>
               </div>
             </div>
             <div className={styles.card}>
@@ -555,7 +555,7 @@ export default function Home() {
               <div className={styles.Title}>Student Dashboard</div>
               <div className={styles.subText}>Karunya</div>
               <div className={styles.learnMoreButton}>
-                <Link href="/">Learn More</Link>
+                <Link href="/classified">Learn More</Link>
               </div>
             </div>
           </div>

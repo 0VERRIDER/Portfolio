@@ -100,24 +100,6 @@ export default function Home() {
     return () => clearTimeout(timeout2);
   }, [blink]);
 
-  ////////////////////////////////////////
-
-  // useEffect(() => {
-  //   let i = 1;
-  //   const interval = setInterval(()=>{
-  //     console.log(i);
-  //     //i==3?i=1:i=i;
-  //     if(i<=3){
-  //       setSkill(i++);
-  //     }
-  //     else{
-  //       clearInterval(interval);
-  //     }
-  //   },6000);
-  //   return () => {
-  //     clearInterval(interval);
-  //   }
-  // }, []);
 
   return (
     <div className={styles.container}>
@@ -484,6 +466,7 @@ export default function Home() {
           <div className={styles.Title}>Projects</div>
           <div className={styles.subText}>Lets take a peek to my recents</div>
           <div className={styles.projectGrid}>
+          <Link href="https://github.com/0VERRIDER/student-id-verification" passHref>
             <div className={styles.card}>
               <div className={styles.icon}>
                 <ul>
@@ -493,9 +476,11 @@ export default function Home() {
               <div className={styles.Title}>Student Id Verification</div>
               <div className={styles.subText}>FutureReadyTalent</div>
               <div className={styles.learnMoreButton}>
-                <Link href="https://github.com/0VERRIDER/student-id-verification">Learn More</Link>
+                Learn More
               </div>
-            </div>
+            </div></Link>
+            <Link href="https://github.com/0VERRIDER/Portfolio" passHref>Learn More
+
             <div className={styles.card}>
               <div className={styles.icon}>
                 <ul>
@@ -505,9 +490,9 @@ export default function Home() {
               <div className={styles.Title}>Portfolio</div>
               <div className={styles.subText}>Personal Project</div>
               <div className={styles.learnMoreButton}>
-                <Link href="https://github.com/0VERRIDER/Portfolio">Learn More</Link>
               </div>
             </div>
+            </Link>
             <div className={styles.card}>
               <div className={styles.icon}>
                 <ul>

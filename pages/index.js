@@ -466,7 +466,6 @@ export default function Home() {
           <div className={styles.Title}>Projects</div>
           <div className={styles.subText}>Lets take a peek to my recents</div>
           <div className={styles.projectGrid}>
-          <Link href="https://github.com/0VERRIDER/student-id-verification" passHref>
             <div className={styles.card}>
               <div className={styles.icon}>
                 <ul>
@@ -476,11 +475,9 @@ export default function Home() {
               <div className={styles.Title}>Student Id Verification</div>
               <div className={styles.subText}>FutureReadyTalent</div>
               <div className={styles.learnMoreButton}>
-                Learn More
+                <Link href="https://github.com/0VERRIDER/student-id-verification">Learn More</Link>
               </div>
-            </div></Link>
-            <Link href="https://github.com/0VERRIDER/Portfolio" passHref>Learn More
-
+            </div>
             <div className={styles.card}>
               <div className={styles.icon}>
                 <ul>
@@ -490,9 +487,9 @@ export default function Home() {
               <div className={styles.Title}>Portfolio</div>
               <div className={styles.subText}>Personal Project</div>
               <div className={styles.learnMoreButton}>
+                <Link href="https://github.com/0VERRIDER/Portfolio">Learn More</Link>
               </div>
             </div>
-            </Link>
             <div className={styles.card}>
               <div className={styles.icon}>
                 <ul>

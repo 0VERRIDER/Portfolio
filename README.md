@@ -1,3 +1,3 @@
 # Personal Portfolio
 
-Made With Love and NextJS
+Made With :heart and NextJS

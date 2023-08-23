@@ -225,6 +225,8 @@
   grid-template-columns: auto auto auto;
   gap: 10px;
   margin-top: 10vh;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .formPlaceholder > .form {

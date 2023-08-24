@@ -12,7 +12,7 @@ export default function ContactMe() {
           <div className={styles.subText + ' ' + "contactTitle"} >Get in Touch with me</div>
           <div className={styles.contactForm}>
 
-            <form name="contact" method="POST" data-netlify="true" action="/" id="contact" className={styles.contact}>
+            <form name="contact" method="POST" data-netlify="true" action="/emailed" id="contact" className={styles.contact}>
               <input type="hidden" name="form-name" value="contact" />
 
               <input type="email" name="email" placeholder={"Enter your email"} required />

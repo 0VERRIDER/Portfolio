@@ -308,7 +308,7 @@
   display: grid;
   /* grid-template-columns: repeat(auto-fill, 125px); */
   grid-template-columns: auto auto auto auto auto auto auto auto;
-  gap: 15px;
+  gap: 10px;
   /* grid-auto-flow: column row; */
   /* 
   justify-content: center;
@@ -317,21 +317,24 @@
 }
 
 .horizontalPlaceholder {
-  height: 70vh;
-  padding-top: 30vh;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  /* padding-top: 30vh; */
   overflow-x: scroll;
+  padding-right: 5vw;
 }
 
 .gridPlaceholder > .Title {
   /* position: absolute;
   left:46%;
   transform: translateY(-50%); */
-  position: relative;
+  /* position: relative; */
   text-align: center;
   color: white;
   font-weight: bold;
   font-size: 21px;
-  padding-top: 15vh;
+  /* padding-top: 15vh; */
   clear: none;
   /* z-index: 100; */
 }
@@ -422,7 +425,7 @@
   color: white;
   font-weight: bold;
   font-size: 30px;
-  margin: 14vh 0 0 15vw;
+  margin-left: 15vw;
   float: left;
   clear: none;
 }
@@ -905,7 +908,6 @@
 
   .horizontalPlaceholder > .Title {
     font-size: 24px;
-    margin: 12vh 0 0 15vw !important;
   }
 
   .gridPlaceholder > .Title {

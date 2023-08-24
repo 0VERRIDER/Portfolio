@@ -218,6 +218,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 15vh;
 }
 
 .gridPlaceholder > .projectGrid {
@@ -403,6 +404,8 @@
 
 .aboutme {
   position: absolute;
+  display: flex;
+  flex-direction: column;
   margin: 32vh 0 0 55%;
 }
 
@@ -853,6 +856,10 @@
     position: absolute;
     display: block;
     margin: 25vh 0 0 10%;
+  }
+
+  .gridPlaceholder {
+    padding-top: 0;
   }
 
   .logoWrap {

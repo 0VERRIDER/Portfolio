@@ -6,6 +6,7 @@ import styles from '../styles/Test.module.css';
 export default function NavBar() {
     const [navState, setNavState] = useState(false);
 
+
     const routes = [
         {
             name: "Home",
@@ -64,7 +65,20 @@ export default function NavBar() {
                         (route, i) =>
                             <Link key={i} passHref={true} href={`${route.href}`} ><a onClick={navSwitch}><li className={router.asPath == `/${route.href}` ? styles.noselect + ' ' + styles.active : styles.noselect} >{route.name}</li></a></Link>
                     )}
-                    <li ><Link href={"https://www.dropbox.com/s/lyzfotvwpcyyhre/ANSHIL_P_URK19EC2010_RESUME.pdf?dl=1"} passHref={true}><a onClick={resumeDownload}><button className={styles.resumeButton}>{dwnldState ? "Downloading..." : "Resume"}</button></a></Link></li>
+                    <li>
+                    <a 
+                        href={`/docs/ANSHIL_P_RESUME.pdf`} 
+                        download={`Anshil_Resume_${Date.now()}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        >
+                            <a onClick={resumeDownload}>
+                                <button className={styles.resumeButton}>
+                                    {dwnldState ? "Downloading..." : "Resume"}
+                                </button>
+                            </a>
+                    </a>
+                    </li>
                     <li><div className={styles.socialIcons}>
                         <Link href={"https://instagram.com/anshil.me"} passHref={true}><span className={styles.instagram}></span></Link>
                         <Link href={"https://github.com/0VERRIDER"} passHref={true}><span className={styles.github}></span></Link>

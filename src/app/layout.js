@@ -19,6 +19,7 @@ export const viewport = {
   height: 'device-height',
   orientation: 'portrait',
   color: '#0f141a',
+  themeColor: '#0f141a',
 }
 
 export default function RootLayout({ children }) {

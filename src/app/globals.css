@@ -20,10 +20,6 @@ body {
   color: rgb(var(--foreground-rgb));
 }
 
-.scroll-snap-container {
-  scroll-snap-type: y mandatory;
-}
-
-.scroll-snapped-content {
-  scroll-snap-align: start;
+main {
+  overflow-x: hidden;
 }

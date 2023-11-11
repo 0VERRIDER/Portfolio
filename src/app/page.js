@@ -1,7 +1,8 @@
-import Image from 'next/image'
 import MainHead from './sections/MainHead';
 import AboutMe from './sections/AboutMe';
 import Skills from './sections/Skills';
+import Projects from './sections/Projects';
+import ContactMe from './sections/ContactMe';
 
 export default function Home() {
   return (
@@ -9,6 +10,8 @@ export default function Home() {
       <MainHead />
       <AboutMe />
       <Skills />
+      <Projects />
+      <ContactMe />
     </main>
   )
 }

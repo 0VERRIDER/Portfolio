@@ -1,12 +1,9 @@
 import Container from "../components/Container";
-import LogoLined from "../resources/LogoLined";
 
-export default function Skills() {
+export default function ContactMe() {
     return(
-        <Container className="flex-col bg-gradient-to-b from-grey-brown from-30% to-black">
-            <div className="flex">
-                <div className="text-white text-2xl font-bold p-10 uppercase">Tech Stack</div>
-            </div>
+        <Container className="flex-col bg-gradient-to-b from-dark-purple from-30% to-black">
+            <div className="text-white text-2xl font-bold p-10 uppercase text-center">Contact Me</div>
         </Container>
     )
 }

@@ -9,7 +9,25 @@ module.exports = {
     extend: {
       colors: {
         primary: "#0f141a",
-        "grey-brown": "#141619"
+        "grey-brown": "#141619",
+        "dark-purple": "#280D3D"
+      },
+      animation: {
+        'infinite-scroll': 'infinite-scroll 46s linear infinite',
+        'reverse-infinite-scroll': 'reverse-infinite-scroll 36s linear infinite',
+      },
+      keyframes: {
+        'infinite-scroll': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-50%)' },
+        },
+        'reverse-infinite-scroll': {
+          from: { transform: 'translateX(-50%)' },
+          to: { transform: 'translateX(0)' },
+        },
+        backgroundImage: {
+          'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        }
       },
     },
   },

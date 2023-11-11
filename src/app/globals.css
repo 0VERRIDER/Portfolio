@@ -34,3 +34,7 @@ main {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+.scrolling-logos:hover {
+  animation-play-state: paused;
+}

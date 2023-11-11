@@ -207,7 +207,7 @@ export default function Skills() {
                     {
                         chunks.map((chunk, index) => {
                             return (
-                                <div key={index} className={`flex flex-row items-center justify-center p-5 gap-3 ${index % 2 == 0 ? "animate-infinite-scroll" : "animate-reverse-infinite-scroll"}`}>
+                                <div key={index} className={`scrolling-logos flex flex-row items-center justify-center p-5 gap-3 ${index % 2 == 0 ? "animate-infinite-scroll" : "animate-reverse-infinite-scroll"}`}>
                                     {
                                         chunk.map((skill, index) => {
                                             return (

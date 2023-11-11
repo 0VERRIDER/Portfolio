@@ -1,6 +1,9 @@
 import './globals.css'
+import { Inter } from 'next/font/google';
 import * as strings from './resources/strings';
 import BottomNav from './components/BottomNav';
+
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: strings.en.META_TITLE,
@@ -25,7 +28,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className={inter.className}>
         {children}
         <BottomNav />
       </body>

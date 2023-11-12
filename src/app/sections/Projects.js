@@ -39,7 +39,7 @@ export default function Projects() {
         <Container className="flex-col md:items-center md:justify-center  md:flex-row bg-black">
                 <div className="md:flex md:flex-col md:justify-center md:items-center text-white text-2xl font-bold uppercase text-center p-10 md:mb-24 md:w-1/3">Projects</div>
             <div className="flex flex-col w-full">
-                <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-3 px-5 md:px-20  justify-center items-center ">
+                <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-5 px-5 md:px-20  justify-center items-center ">
                     {
                         projects.map((project, index) => {
                             return (
@@ -60,7 +60,7 @@ export default function Projects() {
                         })
                     }
                 </div>
-                    <div className="flex flex-col justify-center items-center p-5 w-full">
+                    <div className="flex flex-col justify-center items-center p-10 w-full">
                         <button className="bg-white text-black text-sm w-48 rounded-full font-bold p-5 uppercase text-center">Show All</button>
                     </div>
             </div>

@@ -15,8 +15,8 @@ module.exports = {
         "dark-blue": "#00008B"
       },
       animation: {
-        'infinite-scroll': 'infinite-scroll 46s linear infinite',
-        'reverse-infinite-scroll': 'reverse-infinite-scroll 36s linear infinite',
+        'infinite-scroll': 'infinite-scroll 50s linear infinite',
+        'reverse-infinite-scroll': 'reverse-infinite-scroll 40s linear infinite',
       },
       keyframes: {
         'infinite-scroll': {

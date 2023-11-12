@@ -10,7 +10,9 @@ module.exports = {
       colors: {
         primary: "#0f141a",
         "grey-brown": "#141619",
-        "dark-purple": "#280D3D"
+        "dark-purple": "#280D3D",
+        "dark-green": "#013220",
+        "dark-blue": "#00008B"
       },
       animation: {
         'infinite-scroll': 'infinite-scroll 46s linear infinite',

@@ -16,6 +16,16 @@ const projects = [
         "name": "StockIT",
         "slogan": "On-shelf Inventory Management",
         "url": "https://stockit.anshil.me"
+    },
+    {
+        "name": "The Resume Manager",
+        "slogan": "Manage and track resume submissions",
+        "url": "https://resumemanager.anshil.me"
+    },
+    {
+        "name": "InfoWiz",
+        "slogan": "Medical Chat Bot",
+        "url": "https://infowiz.anshil.me"
     }
 ]
 

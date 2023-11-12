@@ -40,8 +40,8 @@ export default function Projects() {
                             return (
                                 <div key={index} className={` flex ${index%2==0 ? "flex-row bg-gradient-to-r" : "flex-row-reverse bg-gradient-to-l "} h-32 w-full from-black ${project.color || "to-primary"} border border-white hover:border-2 transition-all rounded-lg`}>
                                     <div className="flex flex-col justify-center items-center w-full">
-                                        <div className="text-white text-2xl p-1 font-bold">{ project.name }</div>
-                                        <div className="text-white text-[10px] font-light">{ project.slogan }</div>
+                                        <div className="text-white text-2xl p-1 font-bold text-center">{ project.name }</div>
+                                        <div className="text-white text-[10px] font-light text-center">{ project.slogan }</div>
                                     </div>
                                     <div className={`flex flex-col justify-center ${index%2==0 ? "items-end" : "items-start"} px-10 w-1/2`}>
                                         {

@@ -21,10 +21,10 @@ module.exports = {
       keyframes: {
         'infinite-scroll': {
           from: { transform: 'translateX(0)' },
-          to: { transform: 'translateX(-50%)' },
+          to: { transform: 'translateX(-40%)' },
         },
         'reverse-infinite-scroll': {
-          from: { transform: 'translateX(-50%)' },
+          from: { transform: 'translateX(-40%)' },
           to: { transform: 'translateX(0)' },
         },
         backgroundImage: {

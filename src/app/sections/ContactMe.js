@@ -23,7 +23,7 @@ const socials = [
 
 export default function ContactMe() {
     return (
-        <Container className="flex-col md:flex-row-reverse bg-gradient-to-b from-dark-purple from-30% to-black">
+        <Container className="flex-col md:flex-row bg-gradient-to-b from-dark-purple from-30% to-black">
             <div className="flex flex-col items-center p-10 md:w-1/2 m-auto">
                 <div className="text-white text-2xl font-bold p-10 uppercase text-center">Contact Me</div>
                 <form className="flex flex-col justify-center items-center">

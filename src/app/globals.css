@@ -35,3 +35,51 @@ body {
 .scrolling-logos:hover {
   animation-play-state: paused;
 }
+
+.name-title {
+  position: relative;
+}
+
+.name-title .letter {
+  position: relative;
+  display: inline-block;
+}
+
+/* Animation for the first letter 'A' */
+.name-title .letter:first-child {
+  opacity: 1;
+  animation: slide-in-first 6s ease-in-out;
+}
+
+@keyframes slide-in-first {
+  0% {
+    left: 40%;
+  }
+  70% {
+    left: 40%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+/* Animation for the remaining letters */
+.name-title .letter:not(:first-child) {
+  animation: slide-in-later 6.22s ease-in-out;
+}
+
+@keyframes slide-in-later {
+  0% {
+    transform: translateX(20%);
+    opacity: 0;
+  }
+  74% {
+    transform: translateX(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+

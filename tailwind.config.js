@@ -17,6 +17,7 @@ module.exports = {
       animation: {
         'infinite-scroll': 'infinite-scroll 50s linear infinite',
         'reverse-infinite-scroll': 'reverse-infinite-scroll 40s linear infinite',
+        'reveal': 'reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s',
       },
       keyframes: {
         'infinite-scroll': {
@@ -27,10 +28,14 @@ module.exports = {
           from: { transform: 'translateX(-40%)' },
           to: { transform: 'translateX(0)' },
         },
-        backgroundImage: {
-          'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        }
+        'reveal': {
+          from: { transform: 'translae(0, 100%)' },
+          to: { transform: 'translate(0, 0)' },
+        },
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      }
     },
   },
   plugins: []

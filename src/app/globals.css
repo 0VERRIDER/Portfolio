@@ -83,3 +83,16 @@ body {
   }
 }
 
+/* Animate an svg group at .logo #lined */
+.logo #filled {
+  animation: line-anim 1s ease-in-out;
+}
+
+@keyframes line-anim {
+  from {
+    transform: translate(-8%, -3%);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}

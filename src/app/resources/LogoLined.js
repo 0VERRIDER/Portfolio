@@ -11,7 +11,7 @@ export default function LogoLined(props) {
             className={className}
         >
             <g stroke="#fff">
-                <g>
+                <g id="lined">
                     <rect
                         width="32.347"
                         height="193.746"
@@ -46,7 +46,7 @@ export default function LogoLined(props) {
                         transform="rotate(-21.238 64.673 12.596)"
                     ></rect>
                 </g>
-                <g fill="#fff">
+                <g fill="#fff" id="filled">
                     <rect
                         width="32.347"
                         height="193.746"

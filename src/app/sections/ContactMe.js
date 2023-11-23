@@ -22,11 +22,29 @@ const socials = [
 
 
 export default function ContactMe() {
+    // form handler function using netlify forms
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const data = new FormData(form);
+        fetch("/", {
+            method: "POST",
+            body: data,
+            headers: {
+                'Accept': 'application/x-www-form-urlencoded'
+            }
+        }).then(() => {
+            alert('Thank you for your message!');
+            form.reset();
+        }).catch((error) => {
+            alert(error);
+        });
+    }
     return (
         <Container id="contact-me" className="flex-col md:flex-row bg-gradient-to-b from-dark-purple from-30% to-black">
             <div className="flex flex-col items-center p-10 md:w-1/2 m-auto">
                 <div className="text-white text-2xl font-bold p-10 uppercase text-center">Contact Me</div>
-                <form className="flex flex-col justify-center items-center">
+                <form className="flex flex-col justify-center items-center" onSubmit={handleSubmit} netlify>
                     <label className="relative flex items-center">
                         <UserIcon className="absolute left-6 h-5 w-5 text-white mr-2" />
                         <input className="border border-white bg-transparent text-white rounded-md pl-12 h-15 p-4 m-2 w-80" type="text" name='name' placeholder="Name" />

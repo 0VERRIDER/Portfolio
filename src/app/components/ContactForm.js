@@ -21,7 +21,8 @@ export default function ContactForm() {
         });
     }
     return (
-        <form className="flex flex-col justify-center items-center" onSubmit={handleSubmit} netlify="true">
+        <form className="flex flex-col justify-center items-center" onSubmit={handleSubmit} data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
             <label className="relative flex items-center">
                 <UserIcon className="absolute left-6 h-5 w-5 text-white mr-2" />
                 <input className="border border-white bg-transparent text-white rounded-md pl-12 h-15 p-4 m-2 w-80" type="text" name='name' placeholder="Name" />

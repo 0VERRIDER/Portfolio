@@ -4,6 +4,7 @@ import * as strings from './resources/strings';
 import BottomNav from './components/BottomNav';
 import Menu from './components/Menu';
 import { MenuProvider } from './context/menu/MenuProvider';
+import SplashScreen from './components/SplashScreen';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
     <MenuProvider>
         <html lang="en">
           <body className={inter.className}>
+            <SplashScreen/>
             {children}
             <Menu />
             <BottomNav />

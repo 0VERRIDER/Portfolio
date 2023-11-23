@@ -33,7 +33,7 @@ export default function MainHead() {
             if (i === jobTitles.length) {
                 i = 0;
             }
-        }, 5000);
+        }, 6000);
         
     }, []);
 

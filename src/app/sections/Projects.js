@@ -36,7 +36,7 @@ const projects = [
 
 export default function Projects() {
     return (
-        <Container className="flex-col md:items-center md:justify-center  md:flex-row bg-black select-none">
+        <Container id="projects" className="flex-col md:items-center md:justify-center  md:flex-row bg-black select-none">
             <div className="md:flex md:flex-col md:justify-center md:items-center text-white text-2xl font-bold uppercase text-center p-10 md:mb-24 md:w-1/3">Projects</div>
             <div className="flex flex-col w-full">
                 <div className="grid grid-cols-2 md:grid-cols-2 w-full md:gap-5 md:px-20  justify-center items-center ">

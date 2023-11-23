@@ -199,7 +199,7 @@ let chunks = Array.from({ length: Math.ceil(skills.length / chunkSize) }, (_, i)
 
 export default function Skills() {
     return (
-        <Container className="flex-col md:flex-row-reverse md:items-center md:justify-center bg-gradient-to-b from-grey-brown from-30% to-black">
+        <Container id="skills" className="flex-col md:flex-row-reverse md:items-center md:justify-center bg-gradient-to-b from-grey-brown from-30% to-black">
             <div className="text-white text-2xl font-bold md:m-auto h-full p-10 pr-20 md:w-1/3  text-center uppercase">Tech Stack</div>
             <div className="flex mx-auto md:w-1/2 flex-row md:[mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
                 <div className="flex flex-col items-center scrollbar-hide   mx-auto md:[mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">

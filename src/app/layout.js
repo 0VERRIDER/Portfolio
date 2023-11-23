@@ -2,6 +2,8 @@ import './globals.css'
 import { Inter } from 'next/font/google';
 import * as strings from './resources/strings';
 import BottomNav from './components/BottomNav';
+import Menu from './components/Menu';
+import { MenuProvider } from './context/menu/MenuProvider';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,11 +29,14 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        {children}
-        <BottomNav />
-      </body>
-    </html>
+    <MenuProvider>
+        <html lang="en">
+          <body className={inter.className}>
+            {children}
+            <Menu />
+            <BottomNav />
+          </body>
+        </html>
+    </MenuProvider>
   )
 }

@@ -5,7 +5,7 @@ import LogoLined from "../resources/LogoLined";
 
 export default function AboutMe() {
     return(
-        <Container className="flex-col md:flex-row p-10 items-center bg-black">
+        <Container id="about-me" className="flex-col md:flex-row p-10 items-center bg-black">
                 <div className="flex flex-row items-center justify-center logo py-24 md:w-1/3 md:mb-16">
                     <LogoLined className="logo md:h-24 h-32" />
                 </div>

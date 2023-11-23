@@ -3,23 +3,20 @@ import { UserIcon, EnvelopeIcon, Bars3BottomLeftIcon } from '@heroicons/react/24
 
 export default function ContactForm() {
     // form handler function using netlify forms
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const form = e.target;
-        const data = new FormData(form);
+    const handleSubmit = (event) => {
+        event.preventDefault();
+      
+        const myForm = event.target;
+        const formData = new FormData(myForm);
+      
         fetch("/", {
-            method: "POST",
-            body: data,
-            headers: {
-                'Accept': 'application/x-www-form-urlencoded'
-            }
-        }).then(() => {
-            alert('Thank you for your message!');
-            form.reset();
-        }).catch((error) => {
-            alert(error);
-        });
-    }
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString(),
+        })
+          .then(() => alert("Success!"))
+          .catch((error) => alert(error));
+      };
     return (
         <form className="flex flex-col justify-center items-center" onSubmit={handleSubmit} data-netlify="true">
             <input type="hidden" name="form-name" value="contact" />

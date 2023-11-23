@@ -32,7 +32,7 @@ export default function ContactForm() {
                 <Bars3BottomLeftIcon className="absolute top-[26%] left-6 w-5 text-white mr-2" />
                 <textarea className="border border-white bg-transparent text-white rounded-md pl-12 h-30 p-4 m-2 w-80" type="text" name='message' placeholder="Subject" />
             </label>
-            <button className="border border-white rounded-md p-2 m-2 w-80 bg-white text-dark-purple font-bold uppercase">Send</button>
+            <input className="border border-white rounded-md p-2 m-2 w-80 bg-white text-dark-purple font-bold uppercase" type="submit" value="Send" />
         </form>
     )
 }

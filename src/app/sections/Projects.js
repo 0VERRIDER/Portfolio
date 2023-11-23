@@ -8,6 +8,16 @@ const projects = [
         "url": "https://medwiz.anshil.me"
     },
     {
+        "name": "TrackWheels",
+        "slogan": "Tracking Based Business Management",
+        "url": "https://trackwheels.anshil.me"
+    },
+    {
+        "name": "ResumeManager",
+        "slogan": "Resume Management System",
+        "url": "https://resume.anshil.me"
+    },
+    {
         "name": "API Manager",
         "slogan": "API of APIs",
         "url": "https://api.anshil.me"
@@ -18,20 +28,21 @@ const projects = [
         "url": "https://stockit.anshil.me"
     },
     {
-        "name": "The Resume Manager",
-        "slogan": "Manage and track resume submissions",
-        "url": "https://resumemanager.anshil.me"
-    },
-    {
         "name": "InfoWiz",
         "slogan": "Medical Chat Bot",
         "url": "https://infowiz.anshil.me"
     },
     {
-        "name": "TrackWheels",
-        "slogan": "Tracking Based Business Management",
-        "url": "https://trackwheels.anshil.me"
-    }
+        "name": "CountDown",
+        "slogan": "Count Down Timer",
+        "url": "https://countdown.anshil.me"
+    },
+    {
+        "name": "Show All",
+        "slogan": "View all projects",
+        "url": "https://github.com/0verrider",
+        "color": "to-black"
+    },
 ]
 
 export default function Projects() {
@@ -44,10 +55,10 @@ export default function Projects() {
                         projects.map((project, index) => {
                             return (
                                 <div key={index} className={` flex flex-row bg-gradient-to-r  h-32 w-full from-black ${ index%2==0 ? "border-l-0" : "border-x-0" } ${project.color || "to-primary"} border md:border border-white hover:border-2 transition-all md:rounded-lg`}>
-                                    <div className="flex flex-col justify-center items-center w-full">
+                                    <a href={project.url} target="_blank" rel="noopener noreferrer" className="flex flex-col justify-center items-center w-full">
                                         <div className="text-white text-xl p-1 font-bold text-center">{project.name}</div>
                                         <div className="text-white text-[10px] w-[80%] font-light text-center">{project.slogan}</div>
-                                    </div>
+                                    </a>
                                     <div className={`hidden md:flex flex-col justify-center items-end px-10 w-1/2`}>
                                         <ChevronRightIcon className="h-8 w-8 text-white" />
                                     </div>
@@ -55,9 +66,6 @@ export default function Projects() {
                             )
                         })
                     }
-                </div>
-                <div className="flex flex-col justify-center items-center p-10 w-full">
-                    <button className="bg-white hover:bg-black text-black hover:text-white border border-white transition-all- text-sm w-48 rounded-full font-bold p-5 uppercase text-center">Show All</button>
                 </div>
             </div>
         </Container>

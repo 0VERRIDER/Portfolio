@@ -6,7 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 15, 20, 26;
   --background-end-rgb: 0, 0, 0;
-  --opening-animation-delay: 3.5s;
+  --opening-animation-delay: 3s;
 }
 
 @media (prefers-color-scheme: dark) {

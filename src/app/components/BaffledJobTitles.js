@@ -3,9 +3,12 @@
 import baffle from "baffle";
 import { useEffect } from "react";
 import { useContext } from 'react';
+import { SplashContext } from "../context/spalshscreen/SplashContext";
 
 
 export default function BaffledJobTitles() {
+    const { isSplashScreenAnimationComplete } = useContext(SplashContext);
+
     const characters = '/-=\\\' + "';
 
     const jobTitles = [
@@ -55,13 +58,15 @@ export default function BaffledJobTitles() {
         };
 
         // Start The Baffle Animation
-        startTimeout();
+        if (isSplashScreenAnimationComplete) {
+            startTimeout();
+        }
 
         return () => {
             clearInterval(intervalId);
             clearTimeout(timeoutId);
         };
-    }, []);
+    }, [isSplashScreenAnimationComplete]);
 
     return (
         <>

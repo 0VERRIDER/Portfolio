@@ -100,7 +100,7 @@ body::-webkit-scrollbar-thumb {
 
 /* Animate an svg group at .logo #lined */
 .logo #filled {
-  animation: line-anim 2s ease-in-out;
+  animation: line-anim 2.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 @keyframes line-anim {
@@ -113,14 +113,5 @@ body::-webkit-scrollbar-thumb {
 }
 
 .fade {
-  animation: fade-out 1s linear;
-}
-
-@keyframes fade-out {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+  opacity: 0;
 }

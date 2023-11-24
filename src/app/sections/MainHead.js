@@ -12,7 +12,6 @@ export default function MainHead() {
                     <BaffledJobTitles />
                 </div>
             </div>
-
         </Container>
     )
 }

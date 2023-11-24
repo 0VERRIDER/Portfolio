@@ -24,15 +24,15 @@ const socials = [
 
 export default function ContactMe() {
     return (
-        <Container id="contact-me" className="flex-col md:flex-row bg-gradient-to-b from-dark-purple from-30% to-black">
+        <Container id="contact-me" className="flex-col md:flex-row bg-black">
             <div className="flex flex-col items-center p-10 md:w-1/2 m-auto">
                 <ContactForm />
-                <div className="flex flex-row justify-center items-center gap-6 md:py-10 py-36">
+                <div className="flex flex-row justify-center items-center gap-6 md:py-10 py-24">
                     {socials.map((social, index) => {
                         return (
                             <div key={index} className=" p-2 invert">
                                 <a href={social.href}>
-                                    <Image src={social.icon} alt={social.name} width={30} height={30} className='rounded-sm w-7 h-7 hover:opacity-80' />
+                                    <Image src={social.icon} alt={social.name} width={30} height={30} className='rounded-sm w-7 h-7 hover:opacity-70' />
                                 </a>
                             </div>
                         )

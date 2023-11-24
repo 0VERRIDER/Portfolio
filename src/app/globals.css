@@ -4,6 +4,7 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
+  --background-rgb: 0,0,0;
   --background-start-rgb: 15, 20, 26;
   --background-end-rgb: 0, 0, 0;
   --opening-animation-delay: 0s;
@@ -15,6 +16,9 @@
     --background-start-rgb: 15, 20, 26;
     --background-end-rgb: 0, 0, 0;
   }
+}
+body, html {
+  background-color: var(--background-rgb);
 }
 
 body {
@@ -50,17 +54,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* Animate an svg group at .logo #lined */
-.logo #filled {
-  animation: line-anim 2.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+.logo #filled.moved {
+  transform: translate(6%, 2.6%);
 }
 
-@keyframes line-anim {
-  from {
-    transform: translate(-8%, -3%);
-  }
-  to {
-    transform: translate(0, 0);
-  }
+.logo #filled {
+  transition: transform 2.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .fade {

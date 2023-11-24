@@ -9,6 +9,7 @@ const alexandria = Alexandria({ subsets: ['latin'], weight: ["700"] });
 
 export default function MainHead() {
     const characters = '/-=\\\' + "';
+
     const jobTitles = [
         'Software Engineer',
         'Web Developer',
@@ -34,7 +35,7 @@ export default function MainHead() {
                 i = 0;
             }
         }, 6000);
-        
+
     }, []);
 
     return (

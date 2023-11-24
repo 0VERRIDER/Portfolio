@@ -5,6 +5,7 @@ import BottomNav from './components/BottomNav';
 import Menu from './components/Menu';
 import { MenuProvider } from './context/menu/MenuProvider';
 import SplashScreen from './components/SplashScreen';
+import { SplashProvider } from './context/spalshscreen/SplashProvider';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,15 +31,17 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <MenuProvider>
-        <html lang="en">
-          <body className={inter.className}>
-            <SplashScreen/>
-            {children}
-            <Menu />
-            <BottomNav />
-          </body>
-        </html>
-    </MenuProvider>
+    <html lang="en">
+      <body className={inter.className}>
+        <SplashProvider>
+          <SplashScreen />
+          {children}
+        </SplashProvider>
+        <MenuProvider>
+          <Menu />
+          <BottomNav />
+        </MenuProvider>
+      </body>
+    </html>
   )
 }

@@ -1,3 +1,3 @@
-import React from 'react';
+import { createContext } from 'react';
 
-export const MenuContext = React.createContext();
+export const MenuContext = createContext();

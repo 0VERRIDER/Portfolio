@@ -6,7 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 15, 20, 26;
   --background-end-rgb: 0, 0, 0;
-  --opening-animation-delay: 3s;
+  --opening-animation-delay: 0s;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -59,7 +59,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* Animation for the first letter 'A' */
-.name-title .letter:first-child {
+.name-title.start-anim .letter:first-child {
   opacity: 1;
   animation: slide-in-first 6s ease-in-out;
   animation-delay: var(--opening-animation-delay);
@@ -78,7 +78,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* Animation for the remaining letters */
-.name-title .letter:not(:first-child) {
+.name-title.start-anim .letter:not(:first-child) {
   animation: slide-in-later 6.22s ease-in-out;
   animation-delay: var(--opening-animation-delay);
 }
@@ -117,10 +117,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 @keyframes fade-out {
-  from {
+  0% {
     opacity: 1;
   }
-  to {
+  100% {
     opacity: 0;
   }
 }

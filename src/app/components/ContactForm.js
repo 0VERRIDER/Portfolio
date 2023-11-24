@@ -54,7 +54,7 @@ export default function ContactForm() {
                     ) : "Send"}
                 </button>
             </form>
-            <div className={`flex flex-col justify-center items-center ${!isSubmited && "hiffen"}`}>
+            <div className={`flex flex-col justify-center items-center ${!isSubmited && "hidden"}`}>
                 {/* A success mark with in a green filled white border circle */}
                 <div className="flex justify-center items-center bg-green-500 rounded-full border-4 border-white h-32 w-32">
                     <svg className="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

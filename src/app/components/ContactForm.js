@@ -28,8 +28,8 @@ export default function ContactForm() {
     };
     return (
         <>
-            <div className={`text-white text-2xl font-bold p-10 uppercase text-center ${isSubmited && "hidden"}`}>Contact Me</div>
-            <form className={`flex flex-col justify-center items-center ${isSubmited && "hidden"}`} onSubmit={handleSubmit} data-netlify="true">
+            <div className={`text-white text-2xl font-bold p-10 uppercase text-center hidden ${isSubmited && "hidden"}`}>Contact Me</div>
+            <form className={`flex flex-col justify-center items-center hidden ${isSubmited && "hidden"}`} onSubmit={handleSubmit} data-netlify="true">
                 <input type="hidden" name="form-name" value="contact" />
                 <label className="relative flex items-center">
                     <UserIcon className="absolute left-6 h-5 w-5 text-white mr-2" />
@@ -54,7 +54,7 @@ export default function ContactForm() {
                     ) : "Send"}
                 </button>
             </form>
-            <div className={`flex flex-col justify-center items-center ${!isSubmited && "hidden"}`}>
+            <div className={`flex flex-col justify-center items-center ${!isSubmited && ""}`}>
                 {/* A success mark with in a green filled white border circle */}
                 <div className="flex justify-center items-center bg-green-500 rounded-full border-4 border-white h-32 w-32">
                     <svg className="h-16 w-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -62,7 +62,7 @@ export default function ContactForm() {
                     </svg>
                 </div>
                 <div className="text-white text-2xl font-bold pt-10 pb-4  text-center">Message Sent</div>
-                <div className="text-white font-normal text-sm text-center pb-10">I will get back to you as soon as possible. Mean While Learn about me.</div>
+                <div className="text-white font-normal text-sm text-center pb-10 w-2/3">I will get back to you as soon as possible. Mean While, Learn about me.</div>
                 {/* A button to download resume */}
                 <a href="https://resume.anshil.me">
                     <button className="btn border-2 border-white text-xl w-60 p-3 rounded-lg bg-black">Download Resume</button>

@@ -49,55 +49,6 @@ body::-webkit-scrollbar-thumb {
   animation-play-state: paused;
 }
 
-/* .name-title {
-  position: relative;
-}
-
-.name-title .letter {
-  position: relative;
-  display: inline-block;
-} */
-
-/* Animation for the first letter 'A' */
-/* .name-title.start-anim .letter:first-child {
-  opacity: 1;
-  animation: slide-in-first 6s ease-in-out;
-  animation-delay: var(--opening-animation-delay);
-}
-
-@keyframes slide-in-first {
-  0% {
-    left: 40%;
-  }
-  70% {
-    left: 40%;
-  }
-  100% {
-    left: 0;
-  }
-} */
-
-/* Animation for the remaining letters */
-/* .name-title.start-anim .letter:not(:first-child) {
-  animation: slide-in-later 6.22s ease-in-out;
-  animation-delay: var(--opening-animation-delay);
-}
-
-@keyframes slide-in-later {
-  0% {
-    transform: translateX(20%);
-    opacity: 0;
-  }
-  74% {
-    transform: translateX(20%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-} */
-
 /* Animate an svg group at .logo #lined */
 .logo #filled {
   animation: line-anim 2.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);

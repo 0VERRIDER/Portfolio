@@ -33,15 +33,15 @@ export default function ContactForm() {
                 <input type="hidden" name="form-name" value="contact" />
                 <label className="relative flex items-center">
                     <UserIcon className="absolute left-6 h-5 w-5 text-white mr-2" />
-                    <input className="border border-white bg-transparent text-white rounded-md pl-12 h-15 p-4 m-2 w-80" type="text" name='name' placeholder="Name" required="true" />
+                    <input className="border border-white bg-transparent text-white rounded-md pl-12 h-15 p-4 m-2 w-80" type="text" name='name' placeholder="Name" required={true}/>
                 </label>
                 <label className="relative flex items-center">
                     <EnvelopeIcon className="absolute left-6 h-5 w-5 text-white mr-2" />
-                    <input className="border border-white bg-transparent text-white rounded-md pl-12 h-15 p-4 m-2 w-80" type="text" name='email' placeholder="Email" required="true" />
+                    <input className="border border-white bg-transparent text-white rounded-md pl-12 h-15 p-4 m-2 w-80" type="text" name='email' placeholder="Email" required={true}/>
                 </label>
                 <label className="relative flex items-center">
                     <Bars3BottomLeftIcon className="absolute top-[26%] left-6 w-5 text-white mr-2" />
-                    <textarea className="border border-white bg-transparent text-white rounded-md pl-12 h-30 p-4 m-2 w-80" type="text" name='message' placeholder="Subject" required="true" />
+                    <textarea className="border border-white bg-transparent text-white rounded-md pl-12 h-30 p-4 m-2 w-80" type="text" name='message' placeholder="Subject" required={true}/>
                 </label>
                 <button className="border border-white rounded-md p-4 m-2 w-80 bg-white text-dark-purple font-bold uppercase" type="submit">
                     {isLoading ? (

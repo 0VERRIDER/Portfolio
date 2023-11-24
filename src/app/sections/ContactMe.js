@@ -26,7 +26,6 @@ export default function ContactMe() {
     return (
         <Container id="contact-me" className="flex-col md:flex-row bg-gradient-to-b from-dark-purple from-30% to-black">
             <div className="flex flex-col items-center p-10 md:w-1/2 m-auto">
-                <div className="text-white text-2xl font-bold p-10 uppercase text-center">Contact Me</div>
                 <ContactForm />
                 <div className="flex flex-row justify-center items-center gap-6 md:py-10 py-36">
                     {socials.map((social, index) => {

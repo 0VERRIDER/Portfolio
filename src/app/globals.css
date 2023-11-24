@@ -25,11 +25,11 @@ body {
 body::-webkit-scrollbar {
   width: 2px;
 }
- 
+
 body::-webkit-scrollbar-track {
   background-color: black;
 }
- 
+
 body::-webkit-scrollbar-thumb {
   background-color: white;
 }
@@ -41,25 +41,25 @@ body::-webkit-scrollbar-thumb {
 
 /* For IE, Edge and Firefox */
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .scrolling-logos:hover {
   animation-play-state: paused;
 }
 
-.name-title {
+/* .name-title {
   position: relative;
 }
 
 .name-title .letter {
   position: relative;
   display: inline-block;
-}
+} */
 
 /* Animation for the first letter 'A' */
-.name-title.start-anim .letter:first-child {
+/* .name-title.start-anim .letter:first-child {
   opacity: 1;
   animation: slide-in-first 6s ease-in-out;
   animation-delay: var(--opening-animation-delay);
@@ -75,10 +75,10 @@ body::-webkit-scrollbar-thumb {
   100% {
     left: 0;
   }
-}
+} */
 
 /* Animation for the remaining letters */
-.name-title.start-anim .letter:not(:first-child) {
+/* .name-title.start-anim .letter:not(:first-child) {
   animation: slide-in-later 6.22s ease-in-out;
   animation-delay: var(--opening-animation-delay);
 }
@@ -96,7 +96,7 @@ body::-webkit-scrollbar-thumb {
     transform: translateX(0%);
     opacity: 1;
   }
-}
+} */
 
 /* Animate an svg group at .logo #lined */
 .logo #filled {
@@ -114,4 +114,35 @@ body::-webkit-scrollbar-thumb {
 
 .fade {
   opacity: 0;
+}
+
+.line-1 {
+  position: relative;
+  border-right: 3px solid transparent;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 2px;
+}
+
+/* Animation */
+.anim-typewriter {
+  animation: typewriter 900ms steps(5) 7s 1 normal both,
+    blinkTextCursor 600ms steps(24) 4s 13 normal;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
 }

@@ -6,7 +6,6 @@ import Menu from './components/Menu';
 import { MenuProvider } from './context/menu/MenuProvider';
 import SplashScreen from './components/SplashScreen';
 import { SplashProvider } from './context/spalshscreen/SplashProvider';
-
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -31,17 +30,17 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <SplashProvider>
-          <SplashScreen />
-          {children}
-        </SplashProvider>
-        <MenuProvider>
-          <Menu />
-          <BottomNav />
-        </MenuProvider>
-      </body>
-    </html>
+      <html lang="en">
+        <body className={inter.className}>
+          <SplashProvider>
+            <SplashScreen />
+            {children}
+          </SplashProvider>
+          <MenuProvider>
+            <Menu />
+            <BottomNav />
+          </MenuProvider>
+        </body>
+      </html>
   )
 }

@@ -96,3 +96,17 @@ body::-webkit-scrollbar-thumb {
     border-right-color: transparent;
   }
 }
+
+#about-me #description span{
+  opacity: 100%;
+  transition: opacity 5s ease-in-out;
+}
+
+#about-me #description.hide span {
+  opacity: 30%;
+  transition-delay: 10s;
+}
+
+.text-shadow-custom {
+  text-shadow: 1px 0 0 rgba(255,255,255,1), 0 1px 0 rgba(255,255,255,1), -1px 0 0 rgba(255,255,255,1), 0 -1px 0 rgba(255,255,255,1);
+}

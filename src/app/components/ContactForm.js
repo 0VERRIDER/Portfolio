@@ -27,7 +27,7 @@ export default function ContactForm() {
             });
     };
     return (
-        <>
+        <div>
             <div className={`text-white text-2xl font-bold p-10 uppercase text-center ${isSubmited && "hidden"}`}>Contact Me</div>
             <form className={`flex flex-col justify-center items-center ${isSubmited && "hidden"}`} onSubmit={handleSubmit} data-netlify="true">
                 <input type="hidden" name="form-name" value="contact" />
@@ -68,6 +68,6 @@ export default function ContactForm() {
                     <button className="btn border-2 border-white text-xl w-60 p-3 rounded-lg bg-black">Download Resume</button>
                 </a>
             </div>
-        </>
+        </div>
     )
 }

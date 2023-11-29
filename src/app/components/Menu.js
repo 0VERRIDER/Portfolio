@@ -52,7 +52,7 @@ return (
           })
         }
         <li className="text-center m-6">
-            <Link href="https://resume.anshil.me">
+            <Link href="/resume" onClick={toggleMenu}>
                 <button className="btn border border-white text-xl w-60 p-6 rounded-lg bg-primary">
                   Resume
                 </button>

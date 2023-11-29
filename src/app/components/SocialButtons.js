@@ -4,17 +4,17 @@ const socials = [
     {
         name: 'Github',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
-        href: ''
+        href: 'https://github.com/0verrider'
     },
     {
         name: 'Linkedin',
         icon: 'https://www.svgrepo.com/show/922/linkedin.svg',
-        href: ''
+        href: 'https://www.linkedin.com/in/anshilp/'
     },
     {
         name: 'Instagram',
         icon: 'https://www.svgrepo.com/show/83715/instagram-logo.svg',
-        href: ''
+        href: 'https://www.instagram.com/anshil.me/'
     }
 ]
 

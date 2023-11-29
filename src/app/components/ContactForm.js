@@ -43,7 +43,7 @@ export default function ContactForm() {
                     <Bars3BottomLeftIcon className="absolute top-[16%] left-6 w-5 text-white mr-2" />
                     <textarea className="border border-white bg-transparent text-white rounded-md pl-12 p-4 m-2 w-80" rows={5} type="text" name='message' placeholder="Subject" required={true}/>
                 </label>
-                <button className="border border-white rounded-md p-4 m-2 w-80 bg-white text-dark-purple font-bold uppercase" type="submit">
+                <button className="select-none border border-white rounded-md p-4 m-2 w-80 bg-white text-dark-purple font-bold uppercase" type="submit">
                     {isLoading ? (
                         <div className="flex justify-center items-center">
                             <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -65,7 +65,7 @@ export default function ContactForm() {
                 <div className="text-white font-normal text-sm text-center pb-10 w-[85%] md:w-[65%]">I will get back to you as soon as possible. Mean While, Learn about me.</div>
                 {/* A button to download resume */}
                 <a href="https://resume.anshil.me">
-                    <button className="btn border-2 border-white text-xl w-60 p-3 rounded-lg bg-black">Download Resume</button>
+                    <button className="btn border-2 border-white text-xl w-60 p-3 rounded-lg bg-black select-none">Download Resume</button>
                 </a>
             </div>
         </div>

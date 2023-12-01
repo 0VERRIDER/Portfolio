@@ -4,7 +4,10 @@ export const en = {
     JOB_TITLES: [
         "Software Developer",
         "Web Developer",
-        "Data Analyst",
+        "MERN Stack Developer",
+        "Python Developer",
+        "React Developer",
+        "AI Enthusiast",
         "Fullstack Developer",
     ],
     RESUME_VERSIONS: [

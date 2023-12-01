@@ -4,6 +4,7 @@ import baffle from "baffle";
 import { useEffect } from "react";
 import { useContext } from 'react';
 import { SplashContext } from "../context/spalshscreen/SplashContext";
+import * as strings from "../resources/strings";
 
 
 export default function BaffledJobTitles() {
@@ -11,13 +12,7 @@ export default function BaffledJobTitles() {
 
     const characters = '/-=\\\' + "';
 
-    const jobTitles = [
-        'Software Engineer',
-        'Web Developer',
-        'Full Stack Developer',
-        'Front End Developer',
-        'Back End Developer',
-    ];
+    const jobTitles = strings.en.JOB_TITLES;
 
     useEffect(() => {
         // Baffle Animation container
@@ -71,7 +66,7 @@ export default function BaffledJobTitles() {
     return (
         <>
             <h2 className="baffled text-base font-medium tracking-widest text-opacity-60 text-center text-white uppercase antialiased w-full h-14">
-                {jobTitles[0]}
+                { jobTitles[0] }
             </h2>
         </>
     )

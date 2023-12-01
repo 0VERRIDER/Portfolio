@@ -177,13 +177,13 @@ export default function ResumeDownloader() {
                     </div>
                     {/* Drop down for Resume version */}
                     <div className="flex flex-col">
-                        <label className="text-white text-sm font-light py-2">Resume Version</label>
+                        <label className="text-white text-sm font-light py-2 hidden">Resume Version</label>
                         <select
                             className="border bg-black border-white rounded-sm p-4"
                             defaultValue={"v3"}
                             required={true}
-                            name="resume_version"
-                        >
+                            hidden={true}
+                            name="resume_version" >
                             {
                                 strings.en.RESUME_VERSIONS.map((version, index) => {
                                     return (

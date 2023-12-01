@@ -78,7 +78,7 @@ body::-webkit-scrollbar-thumb {
 /* Animation */
 .anim-typewriter {
   animation: typewriter 900ms steps(5) 7s 1 normal both,
-    blinkTextCursor 600ms steps(24) 4s 13 normal;
+    blinkTextCursor 600ms steps(24) 0s 17 normal;
 }
 @keyframes typewriter {
   from {

@@ -8,10 +8,14 @@ import * as strings from "../resources/strings";
 
 
 export default function BaffledJobTitles() {
+
+    // Get the isSplashScreenAnimationComplete state from the SplashContext
     const { isSplashScreenAnimationComplete } = useContext(SplashContext);
 
+    // Baffle Animation Characters
     const characters = '/-=\\\' + "';
 
+    // Job Titles Array
     const jobTitles = strings.en.JOB_TITLES;
 
     useEffect(() => {
@@ -57,10 +61,12 @@ export default function BaffledJobTitles() {
             startTimeout();
         }
 
+        // cleanup function to clear the interval and timeout
         return () => {
             clearInterval(intervalId);
             clearTimeout(timeoutId);
         };
+
     }, [isSplashScreenAnimationComplete]);
 
     return (

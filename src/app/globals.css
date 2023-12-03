@@ -80,6 +80,12 @@ body::-webkit-scrollbar-thumb {
   animation: typewriter 900ms steps(5) 7s 1 normal both,
     blinkTextCursor 600ms steps(24) 0s 17 normal;
 }
+
+.name-container {
+  border: red 1px solid;
+}
+
+
 @keyframes typewriter {
   from {
     width: 0;

@@ -1,8 +1,8 @@
 "use client";
 
 import { useContext } from 'react';
-import { MenuContext } from '../context/menu/MenuContext';
-import { BottomMessageBarContext } from '../context/bottomMessageBar/BottomMessageBarContext';
+import { MenuContext } from '../../../context/menu/MenuContext';
+import { BottomMessageBarContext } from '../../../context/bottomMessageBar/BottomMessageBarContext';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 
 export default function BottomNav(){

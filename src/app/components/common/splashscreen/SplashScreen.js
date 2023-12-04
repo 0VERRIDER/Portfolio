@@ -1,8 +1,8 @@
 "use client";
 
 import { useContext, useEffect } from "react";
-import { SplashContext } from "../context/spalshscreen/SplashContext";
-import LogoLined from "../resources/LogoLined"
+import { SplashContext } from "../../../context/spalshscreen/SplashContext";
+import LogoLined from "../../../resources/LogoLined"
 
 export default function SplashScreen() {
     const { isSplashScreenAnimationComplete, isSplashScreenVisible, toggleSplashView } = useContext(SplashContext);

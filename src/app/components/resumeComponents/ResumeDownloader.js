@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useState, useContext } from "react";
-import { BottomMessageBarContext } from "../context/bottomMessageBar/BottomMessageBarContext";
+import { BottomMessageBarContext } from "../../context/bottomMessageBar/BottomMessageBarContext";
 import Link from 'next/link';
-import * as strings from '../resources/strings';
-import * as configs from '../resources/configs';
+import * as strings from '../../resources/strings';
+import * as configs from '../../resources/configs';
 
 export default function ResumeDownloader() {
     const {showBottomMessageBar} = useContext(BottomMessageBarContext);

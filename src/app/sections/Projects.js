@@ -1,4 +1,4 @@
-import Container from "../components/Container";
+import Container from "../components/common/container/Container";
 import { ChevronRightIcon } from '@heroicons/react/24/solid';
 
 const projects = [

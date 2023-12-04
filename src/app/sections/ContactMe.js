@@ -1,26 +1,7 @@
 
-import Container from "../components/Container";
-import ContactForm from '../components/ContactForm';
-import SocialButtons from '../components/SocialButtons';
-
-const socials = [
-    {
-        name: 'Github',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
-        href: ''
-    },
-    {
-        name: 'Linkedin',
-        icon: 'https://www.svgrepo.com/show/922/linkedin.svg',
-        href: ''
-    },
-    {
-        name: 'Instagram',
-        icon: 'https://www.svgrepo.com/show/83715/instagram-logo.svg',
-        href: ''
-    }
-]
-
+import Container from "../components/common/container/Container";
+import ContactForm from '../components/contactForm/ContactForm';
+import SocialButtons from '../components/common/socialButtons/SocialButtons';
 
 export default function ContactMe() {
     return (

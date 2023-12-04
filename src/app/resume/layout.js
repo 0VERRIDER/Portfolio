@@ -1,5 +1,5 @@
 import { BottomMessageBarProvider } from "../context/bottomMessageBar/BottomMessageBarProvider";
-import { BottomMessageBar } from "../components/BottomMessageBar";
+import { BottomMessageBar } from "../components/common/bottomMessageBar/BottomMessageBar";
 
 export default function ResumeLayout({ children }) {
   return (

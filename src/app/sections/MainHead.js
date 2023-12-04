@@ -1,6 +1,6 @@
-import BaffledJobTitles from "../components/BaffledJobTitles";
-import Container from "../components/Container";
-import NameTitle from "../components/NameTitle";
+import BaffledJobTitles from "../components/titleComponents/BaffledJobTitles";
+import Container from "../components/common/container/Container";
+import NameTitle from "../components/titleComponents/NameTitle";
 
 export default function MainHead() {
     return (

@@ -3,8 +3,8 @@
 import baffle from "baffle";
 import { useEffect } from "react";
 import { useContext } from 'react';
-import { SplashContext } from "../context/spalshscreen/SplashContext";
-import * as strings from "../resources/strings";
+import { SplashContext } from "../../context/spalshscreen/SplashContext";
+import * as strings from "../../resources/strings";
 
 
 export default function BaffledJobTitles() {

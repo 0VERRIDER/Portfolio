@@ -1,13 +1,13 @@
 import './globals.css'
 import { Inter } from 'next/font/google';
 import * as strings from './resources/strings';
-import BottomNav from './components/BottomNav';
-import Menu from './components/Menu';
+import BottomNav from './components/common/bottomNav/BottomNav';
+import Menu from './components/common/menu/Menu';
 import { MenuProvider } from './context/menu/MenuProvider';
-import SplashScreen from './components/SplashScreen';
+import SplashScreen from './components/common/splashscreen/SplashScreen';
 import { SplashProvider } from './context/spalshscreen/SplashProvider';
 import { BottomMessageBarProvider } from './context/bottomMessageBar/BottomMessageBarProvider';
-import { BottomMessageBar } from './components/BottomMessageBar';
+import { BottomMessageBar } from './components/common/bottomMessageBar/BottomMessageBar';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {

@@ -2,8 +2,8 @@
 
 import { useContext, useEffect, useState } from "react";
 import Link from 'next/link';
-import { MenuContext } from "../context/menu/MenuContext";
-import SocialButtons from "./SocialButtons";
+import { MenuContext } from "../../../context/menu/MenuContext";
+import SocialButtons from "../socialButtons/SocialButtons";
 
 export default function Menu() {
 const { isMenuOpen, toggleMenu } = useContext(MenuContext);

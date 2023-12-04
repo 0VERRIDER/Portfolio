@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import useIsInView from "../hooks/useIsInView";
-import Container from "../components/Container";
+import Container from "../components/common/container/Container";
 import LogoLined from "../resources/LogoLined";
 
 export default function AboutMe() {

@@ -2,7 +2,7 @@
 
 import { Alexandria } from 'next/font/google';
 import { useContext } from 'react';
-import { SplashContext } from '../context/spalshscreen/SplashContext';
+import { SplashContext } from '../../context/spalshscreen/SplashContext';
 
 const alexandria = Alexandria({ subsets: ['latin'], weight: ["700"] });
 

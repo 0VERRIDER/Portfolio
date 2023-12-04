@@ -1,7 +1,7 @@
 "use client";
 
 import { useContext } from 'react';
-import { BottomMessageBarContext } from '../context/bottomMessageBar/BottomMessageBarContext';
+import { BottomMessageBarContext } from '../../../context/bottomMessageBar/BottomMessageBarContext';
 import Image from 'next/image'
 
 const socials = [

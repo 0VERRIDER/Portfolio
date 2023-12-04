@@ -6,6 +6,8 @@ import Menu from './components/Menu';
 import { MenuProvider } from './context/menu/MenuProvider';
 import SplashScreen from './components/SplashScreen';
 import { SplashProvider } from './context/spalshscreen/SplashProvider';
+import { BottomMessageBarProvider } from './context/bottomMessageBar/BottomMessageBarProvider';
+import { BottomMessageBar } from './components/BottomMessageBar';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -28,17 +30,21 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-      <html lang="en">
-        <body className={`overflow-hidden ${inter.className}`}>
-          <SplashProvider>
+    <html lang="en">
+
+      <body className={`overflow-hidden ${inter.className}`}>
+        <SplashProvider>
+          <BottomMessageBarProvider>
+            <BottomMessageBar />
             <SplashScreen />
             {children}
-          </SplashProvider>
-          <MenuProvider>
-            <Menu />
-            <BottomNav />
-          </MenuProvider>
-        </body>
-      </html>
+            <MenuProvider>
+              <Menu />
+              <BottomNav />
+            </MenuProvider>
+          </BottomMessageBarProvider>
+        </SplashProvider>
+      </body>
+    </html>
   )
 }

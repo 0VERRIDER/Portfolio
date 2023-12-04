@@ -1,11 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { BottomMessageBarContext } from "../context/bottomMessageBar/BottomMessageBarContext";
 import Link from 'next/link';
 import * as strings from '../resources/strings';
 import * as configs from '../resources/configs';
 
 export default function ResumeDownloader() {
+    const {showBottomMessageBar} = useContext(BottomMessageBarContext);
+
     const [loading, setLoading] = useState(false);
     const [sucess, setSucess] = useState(false);
     const [error, setError] = useState(false);
@@ -38,9 +41,11 @@ export default function ResumeDownloader() {
             setSucess(true);
             let downloadUrl = `${configs.links.RESUME_PROTOCOL}://${configs.links.RESUME_HOST}/api/v1/resume/${data.data.uuid}/get?dl=1`;
             setResumeUrl(downloadUrl);
+            showBottomMessageBar("Resume is downloading in the background.", "bg-green-700");
             window.open(downloadUrl, "_self");
         }).catch((error) => {
             setError(true);
+            showBottomMessageBar("Something went wrong. Please try again later.", "bg-red-700");
             console.log(error);
         });
     }

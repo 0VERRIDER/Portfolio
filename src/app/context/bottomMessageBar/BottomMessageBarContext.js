@@ -1,3 +1,3 @@
 import { createContext } from 'react';
 
-export const SplashContext = createContext();
+export const BottomMessageBarContext = createContext();

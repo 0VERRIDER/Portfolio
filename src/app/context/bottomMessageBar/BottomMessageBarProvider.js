@@ -3,7 +3,11 @@
 import { useState } from "react";
 import { BottomMessageBarContext } from "./BottomMessageBarContext";
 
-function BottomMessageBarProvider({ children }) {
+export function BottomMessageBarProvider({ children }) {
+    const [isBottomBottomMessageBarVisible, setIsBottomBottomMessageBarVisible] = useState(false);
+    const [message, setMessage] = useState("");
+    const [bgColor, setBgColor] = useState("bg-green-700");
+
     function toggleBottomMessageBar() {
         setIsBottomBottomMessageBarVisible(!isBottomBottomMessageBarVisible);
 
@@ -11,14 +15,17 @@ function BottomMessageBarProvider({ children }) {
             setIsBottomBottomMessageBarVisible(false);
             clearTimeout(messageVisiblityTimeOut);
         }, 5000);
+    }
 
+    function showBottomMessageBar(message, color="bg-green-700") {
+        setMessage(message);
+        toggleBottomMessageBar();
+        setBgColor(color);
     }
 
   return (
-    <BottomMessageBarContext.Provider value={{isBottomBottomMessageBarVisible, toggleBottomMessageBar}}>
+    <BottomMessageBarContext.Provider value={{isBottomBottomMessageBarVisible, message, bgColor, showBottomMessageBar}}>
       {children}
     </BottomMessageBarContext.Provider>
   )
 }
-
-export default BottomMessageBarProvider

@@ -1,6 +1,6 @@
 "use client";
 
-import { useContext, useState, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { SplashContext } from "../context/spalshscreen/SplashContext";
 import LogoLined from "../resources/LogoLined"
 

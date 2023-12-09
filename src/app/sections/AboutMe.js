@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import useIsInView from "../hooks/useIsInView";
 import Container from "../components/common/container/Container";
-import LogoLined from "../resources/LogoLined";
+import LogoLined from "../resources/assets/logo/LogoLined";
 
 export default function AboutMe() {
     const ref = useRef(null);

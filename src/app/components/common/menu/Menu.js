@@ -14,6 +14,15 @@ useEffect(() => {
   setPathname(`/${pathAfterHash ? "#" + pathAfterHash :  ""}`);
 });
 
+// function to show loading on clicking resume
+const goToResume = () => {
+  document.querySelector(".btn").innerHTML = "Loading...";
+  setTimeout(() => {
+    document.querySelector(".btn").innerHTML = "Resume";
+    toggleMenu();
+  }, 2000);
+};
+
 const menuItems = [
     {
         name: "Home",
@@ -52,7 +61,7 @@ return (
           })
         }
         <li className="text-center m-6">
-            <Link href="/resume" onClick={toggleMenu}>
+            <Link href="/resume" onClick={goToResume}>
                 <button className="btn border border-white text-xl w-60 p-6 rounded-lg bg-primary">
                   Resume
                 </button>

@@ -64,7 +64,7 @@ export default function ContactForm() {
                 <div className="text-white text-2xl font-bold pt-10 pb-4  text-center">Message Sent</div>
                 <div className="text-white font-normal text-sm text-center pb-10 w-[85%] md:w-[65%]">I will get back to you as soon as possible. Mean While, Learn about me.</div>
                 {/* A button to download resume */}
-                <a href="https://resume.anshil.me">
+                <a href="/resume">
                     <button className="btn border-2 border-white text-xl w-60 p-3 rounded-lg bg-black select-none">Download Resume</button>
                 </a>
             </div>

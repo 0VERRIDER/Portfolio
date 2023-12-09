@@ -1,6 +1,7 @@
 import BaffledJobTitles from "../components/titleComponents/BaffledJobTitles";
 import Container from "../components/common/container/Container";
 import NameTitle from "../components/titleComponents/NameTitle";
+import CursorAnimation from "../components/titleComponents/CursorAnimation";
 
 export default function MainHead() {
     return (
@@ -10,6 +11,7 @@ export default function MainHead() {
                     <h3 className="hidden text-xl font-normal tracking-widest text-center text-white italic antialiased w-full h-9">Hello, I'm</h3>
                     <NameTitle />
                     <BaffledJobTitles />
+                    <CursorAnimation />
                 </div>
             </div>
         </Container>

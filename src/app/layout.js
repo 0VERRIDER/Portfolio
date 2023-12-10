@@ -27,9 +27,6 @@ export const viewport = {
   orientation: 'portrait',
   color: '#0f141a',
   themeColor: '#0f141a',
-  appleMobileWebAppCapable: 'yes',
-  appleMobileWebAppStatusBarStyle: 'black',
-  msTileColor: '#0f141a',
 }
 
 export default function RootLayout({ children }) {

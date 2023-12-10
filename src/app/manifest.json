@@ -3,7 +3,6 @@
     "background_color": "#0f141a",
     "display": "standalone",
     "orientation": "portrait",
-    "scope": "/",
     "start_url": "/",
     "name": "Anshil P",
     "short_name": "Anshil",

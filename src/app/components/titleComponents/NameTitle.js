@@ -40,7 +40,8 @@ export default function NameTitle({ className }) {
         }, [isSplashScreenVisible]);
 
     return (
-        <div className={`name-title ${alexandria.className} ${className} text-7xl font-bold text-center text-white uppercase antialiased w-fit ${isBorderVisible && "border border-[#0c8ce9]"} ${isNameSelectable && "z-10"} overflow-hidden`}>
+        <div className={`name-title ${alexandria.className} ${className} text-7xl font-bold text-center text-white uppercase antialiased w-fit ${isNameSelectable && "z-10"} overflow-hidden`}>
+         {/* <div className={`name-title ${alexandria.className} ${className} text-7xl font-bold text-center text-white uppercase antialiased w-fit ${isBorderVisible && "border border-[#0c8ce9]"} ${isNameSelectable && "z-10"} overflow-hidden`}> */}
             <div className="flex justify-center items-center p-2">
                 <h1 className={`letter line-1 ${!isSplashScreenVisible && "anim-line-blink"}`}>
                     {name}

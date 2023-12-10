@@ -11,7 +11,7 @@ export default function MainHead() {
                     <h3 className="hidden text-xl font-normal tracking-widest text-center text-white italic antialiased w-full h-9">Hello, I'm</h3>
                     <NameTitle />
                     <BaffledJobTitles />
-                    <CursorAnimation />
+                    {/* <CursorAnimation /> */}
                 </div>
             </div>
         </Container>

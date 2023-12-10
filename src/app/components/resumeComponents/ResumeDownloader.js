@@ -154,7 +154,7 @@ export default function ResumeDownloader() {
                             {
                                 strings.en.JOB_TITLES.map((title, index) => {
                                     return (
-                                        <option key={index} value={title}>{title}</option>
+                                        <option key={index} value={title[1]}>{title[0]}</option>
                                     );
                                 })
                             }

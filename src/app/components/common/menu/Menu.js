@@ -53,9 +53,9 @@ return (
           menuItems.map((item, index) => {
             return(
               <li key={index} className={`text-center ${item.link.includes(pathname) && "text-black text-shadow-custom"}`}>
-                <Link href={item.link[0]} onClick={toggleMenu}>
+                <a href={item.link[0]} onClick={toggleMenu}>
                   {item.name}
-                </Link>
+                </a>
               </li>
             )
           })

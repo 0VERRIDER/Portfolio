@@ -15,7 +15,6 @@ export const metadata = {
   applicationName: strings.en.META_APPLICATION_NAME,
   description: strings.en.META_DESCRIPTION,
   url: 'https://anshil.me',
-  manifestUrl: '/manifest.json',
 }
 
 export const viewport = {

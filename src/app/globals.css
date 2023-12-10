@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 0,0,0;
+  --background-start-rgb: 15, 20, 26;
+  --background-end-rgb: 0, 0, 0;
+  --opening-animation-delay: 0s;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 15, 20, 26;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+body, html {
+  background-color: var(--background-rgb);
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 2px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: white;
+}
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrolling-logos:hover {
+  animation-play-state: paused;
+}
+
+/* Animate an svg group at .logo #lined */
+.logo #filled.moved {
+  transform: translate(6%, 2.6%);
+}
+
+.logo #filled {
+  transition: transform 2.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.fade {
+  opacity: 0;
+}
+
+.line-1 {
+  position: relative;
+  border-right: 3px solid transparent;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 2px;
+}
+
+
+/* Animation */
+
+.anim-line-blink {
+  animation: blinkTextCursor 600ms steps(24) 5s 17 normal;
+}
+
+.anim-typewriter {
+  animation: typewriter 900ms steps(5) 7s 1 normal both,
+    blinkTextCursor 600ms steps(24) 5s 17 normal;
+}
+
+.name-container {
+  border: red 1px solid;
+}
+
+@keyframes border-anim {
+  0% {
+    border: none;
+  }
+  1% {
+    border: 1px solid rgba(255, 255, 255, 0);
+  }
+  100% {
+    border: 1px solid rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+#about-me #description span{
+  opacity: 100%;
+  transition: opacity 5s ease-in-out;
+}
+
+#about-me #description.hide span {
+  opacity: 30%;
+  transition-delay: 10s;
+}
+
+.text-shadow-custom {
+  text-shadow: 1px 0 0 rgba(255,255,255,1), 0 1px 0 rgba(255,255,255,1), -1px 0 0 rgba(255,255,255,1), 0 -1px 0 rgba(255,255,255,1);
+}
+
+
+.cursor {
+  inset-inline-start: 100%;
+  top: 20%;
+  animation: cursor-move 2s 3s ease-in-out;
+}
+
+@keyframes cursor-move {
+  0% {
+    inset-inline-start: 100%;
+    top: 20%;
+  }
+  100% {
+    inset-inline-start: 0%;
+    top: 0;
+  }
+}

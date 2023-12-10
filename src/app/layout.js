@@ -32,6 +32,11 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* Link manifest */}
+        <link rel="manifest" href="/manifest.json" />
+        {/* Link favicon */}
+        </head>
 
       <body className={`overflow-hidden ${inter.className}`}>
         <SplashProvider>

@@ -1,11 +1,13 @@
 {
+    "name": "Anshil P",
+    "short_name": "Anshil",
     "theme_color": "#0f141a",
     "background_color": "#0f141a",
     "display": "standalone",
     "orientation": "portrait",
     "start_url": "/",
-    "name": "Anshil P",
-    "short_name": "Anshil",
+    "scope": "/",
+
     "description": "My personal portfolio to showcase my Fullstack development skills.",
     "icons": [
         {

@@ -12,8 +12,10 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: strings.en.META_TITLE,
+  applicationName: strings.en.META_APPLICATION_NAME,
   description: strings.en.META_DESCRIPTION,
   url: 'https://anshil.me',
+  manifestUrl: '/manifest.json',
 }
 
 export const viewport = {
@@ -26,6 +28,9 @@ export const viewport = {
   orientation: 'portrait',
   color: '#0f141a',
   themeColor: '#0f141a',
+  appleMobileWebAppCapable: 'yes',
+  appleMobileWebAppStatusBarStyle: 'black',
+  msTileColor: '#0f141a',
 }
 
 export default function RootLayout({ children }) {
